@@ -85,6 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias comeon="cd ~/devel/comeon-mobile/comeon-mobile-view/src/main/app"
 
 
 
