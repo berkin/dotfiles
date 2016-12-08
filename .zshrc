@@ -192,7 +192,14 @@ build_prompt() {
   prompt_end
 }
 
-RPROMPT='$(prompt_online) $(battery_charge)'
+setopt PROMPT_SUBST
+TMOUT=60
+
+TRAPALRM() {
+    zle reset-prompt
+}
+
+RPROMPT='$(prompt_online) $(battery_charge) %D{%L:%M}'
 
 PROMPT='%{%f%b%k%}$(build_prompt) 
 %{%F{green}%}❯ '
