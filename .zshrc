@@ -183,6 +183,10 @@ function battery_charge {
   echo `~/bin/batcharge.py`
 }
 
+function spotify {
+  . ~/bin/spotify status
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
@@ -199,7 +203,7 @@ TRAPALRM() {
     zle reset-prompt
 }
 
-RPROMPT='$(prompt_online) $(battery_charge) %D{%L:%M}'
+RPROMPT='$(spotify) $(prompt_online) $(battery_charge) %D{%L:%M}'
 
 PROMPT='%{%f%b%k%}$(build_prompt) 
 %{%F{green}%}❯ '
