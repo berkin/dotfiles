@@ -2,6 +2,8 @@ syntax on
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set encoding=utf-8
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -10,6 +12,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -17,6 +20,8 @@ Plugin 'VundleVim/Vundle.vim'
 " markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,6 +38,37 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 let g:vim_markdown_folding_disabled = 1
+
+let g:airline_theme='bubblegum'
+" air-line
+ let g:airline_powerline_fonts = 1
+
+ if !exists('g:airline_symbols')
+     let g:airline_symbols = {}
+     endif
+
+     " unicode symbols
+     let g:airline_left_sep = '»'
+     let g:airline_left_sep = '▶'
+     let g:airline_right_sep = '«'
+     let g:airline_right_sep = '◀'
+     let g:airline_symbols.linenr = '␊'
+     let g:airline_symbols.linenr = '␤'
+     let g:airline_symbols.linenr = '¶'
+     let g:airline_symbols.branch = '⎇'
+     let g:airline_symbols.paste = 'ρ'
+     let g:airline_symbols.paste = 'Þ'
+     let g:airline_symbols.paste = '∥'
+     let g:airline_symbols.whitespace = 'Ξ'
+
+     " airline symbols
+     let g:airline_left_sep = ''
+     let g:airline_left_alt_sep = ''
+     let g:airline_right_sep = ''
+     let g:airline_right_alt_sep = ''
+     let g:airline_symbols.branch = ''
+     let g:airline_symbols.readonly = ''
+     let g:airline_symbols.linenr = ''
 
 au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
