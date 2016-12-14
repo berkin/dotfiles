@@ -47,7 +47,7 @@ let g:airline_theme='papercolor'
 
 " air-line
 let g:airline_powerline_fonts = 1
-
+let g:airline#extensions#tabline#enabled = 1
 
 au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
