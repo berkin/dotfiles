@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias comeon="cd ~/devel/comeon-mobile/comeon-mobile-view/src/main/app"
-
+alias dotfiles="cd ~/devel/dotfiles"
 
 
 # battery charge, online check
