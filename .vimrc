@@ -28,6 +28,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'jaxbot/semantic-highlight.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,6 +52,9 @@ let g:airline_theme='papercolor'
 " air-line
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 
 au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
