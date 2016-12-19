@@ -94,8 +94,8 @@ alias dotfiles="cd ~/devel/dotfiles"
 CURRENT_BG='NONE'
 SEGMENT_SEPARATOR='⮀'
 
-ONLINE='%{%F{green}%}⌔'
-OFFLINE='%{%F{red}%}⌔'
+ONLINE='%{%F{green}%} '
+OFFLINE='%{%F{red}%} '
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -205,5 +205,5 @@ TRAPALRM() {
 
 RPROMPT='$(spotify) $(prompt_online) $(battery_charge)'
 
-PROMPT='%{%f%b%k%}$(build_prompt) 
+PROMPT='%{%f%b%k%}$(build_prompt)
 %D{%e %b %L:%M} %{%F{green}%}❯ '
