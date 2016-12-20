@@ -1,7 +1,7 @@
 # dotfiles
 
 - symlink all the files and folder from this repo.
-- using 13 pt Meslo LG L DZ Regular for Powerline
+- using 13 pt Meslo LG L Regular for Powerline Nerd Font Complete Mono
 
 # todo
 
