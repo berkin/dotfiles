@@ -25,14 +25,12 @@ Plugin 'scrooloose/nerdtree'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
-" markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jelera/vim-javascript-syntax'
-
 Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
