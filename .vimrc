@@ -32,6 +32,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,6 +58,31 @@ let g:airline#extensions#tabline#enabled = 1
 set linespace=0
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_error_symbol = ''
+let g:syntastic_style_error_symbol = ''
+let g:syntastic_warning_symbol = ''
+let g:syntastic_style_warning_symbol = ''
+"let g:syntastic_debug = 3
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', '.;') != '' ? ['eslint'] : ['standard']
+
+"highlight link SyntasticErrorSign SignColumn
+"highlight link SyntasticWarningSign SignColumn
+"highlight link SyntasticStyleErrorSign SignColumn
+"highlight link SyntasticStyleWarningSign SignColumn
+
 
 " Nerdtree quit if it last pane
 function! NERDTreeQuit()

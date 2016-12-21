@@ -94,8 +94,8 @@ alias dotfiles="cd ~/devel/dotfiles"
 CURRENT_BG='NONE'
 #SEGMENT_SEPARATOR='⮀'
 
-ONLINE='%{%F{green}%} '
-OFFLINE='%{%F{red}%} '
+ONLINE='%{%F{green}%}'
+OFFLINE='%{%F{red}%}'
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
