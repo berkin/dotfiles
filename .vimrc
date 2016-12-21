@@ -71,9 +71,9 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_error_symbol = ''
-let g:syntastic_style_error_symbol = ''
+let g:syntastic_style_error_symbol = '⚠'
 let g:syntastic_warning_symbol = ''
-let g:syntastic_style_warning_symbol = ''
+let g:syntastic_style_warning_symbol = '⚠'
 "let g:syntastic_debug = 3
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', '.;') != '' ? ['eslint'] : ['standard']
@@ -83,6 +83,8 @@ autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', 
 "highlight link SyntasticStyleErrorSign SignColumn
 "highlight link SyntasticStyleWarningSign SignColumn
 
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 " Nerdtree quit if it last pane
 function! NERDTreeQuit()
