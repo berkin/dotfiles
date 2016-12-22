@@ -34,6 +34,8 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,6 +78,7 @@ let g:syntastic_style_error_symbol = '⚑'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_warning_symbol = '⚑'
 "let g:syntastic_debug = 3
+let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', '.;') != '' ? ['eslint'] : ['standard']
 
@@ -83,6 +86,14 @@ autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', 
 "highlight link SyntasticWarningSign SignColumn
 "highlight link SyntasticStyleErrorSign SignColumn
 "highlight link SyntasticStyleWarningSign SignColumn
+
+"indent guides
+let g:indent_guides_enable_on_vim_startup = 1 "enable on startup
+set ts=2 sw=2 et
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+let g:indent_guides_color_change_percent = 2
 
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
