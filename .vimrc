@@ -33,6 +33,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
