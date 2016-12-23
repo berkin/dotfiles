@@ -93,7 +93,10 @@ set ts=2 sw=2 et
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-let g:indent_guides_color_change_percent = 2
+"let g:indent_guides_color_change_percent = 2
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=white	 ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=white	 ctermbg=8
 
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
