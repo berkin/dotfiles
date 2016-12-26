@@ -12,6 +12,10 @@ set relativenumber
 set backspace=indent,eol,start
 set clipboard=unnamed
 
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
