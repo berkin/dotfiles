@@ -16,6 +16,17 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
+set list
+"set listchars:▒░,trail:~
+set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set showbreak=↪
+"Invisible character colors
+highlight NonText ctermfg=10 ctermbg=8 guibg=white
+highlight SpecialKey ctermfg=10 ctermbg=8 guibg=white
+
+"highlight NonText guifg=#4a4a59
+"highlight SpecialKey guifg=#4a4a59
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -98,7 +109,7 @@ autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', 
 "highlight link SyntasticStyleWarningSign SignColumn
 
 "indent guides
-let g:indent_guides_enable_on_vim_startup = 1 "enable on startup
+let g:indent_guides_enable_on_vim_startup = 0 "enable on startup
 set ts=2 sw=2 et
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
