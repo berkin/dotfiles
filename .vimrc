@@ -72,6 +72,9 @@ filetype plugin indent on    " required
 map <F9> :bprevious<CR>
 map <F10> :bnext<CR>
 
+"ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 let g:vim_markdown_folding_disabled = 1
 let g:solarized_termcolors = 256
 let g:airline_theme='papercolor'
