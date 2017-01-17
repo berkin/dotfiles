@@ -20,12 +20,10 @@ set list
 "set listchars:▒░,trail:~
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
+
 "Invisible character colors
 highlight NonText ctermfg=10 ctermbg=8 guibg=white
 highlight SpecialKey ctermfg=10 ctermbg=8 guibg=white
-
-"highlight NonText guifg=#4a4a59
-"highlight SpecialKey guifg=#4a4a59
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -95,21 +93,22 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 5
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
-let g:syntastic_error_symbol = ''
-let g:syntastic_style_error_symbol = '⚑'
-let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_style_warning_symbol = '⚑'
+let g:syntastic_error_symbol = ' '
+let g:syntastic_warning_symbol = ' ⚠'
+let g:syntastic_style_error_symbol = ' ⚑'
+let g:syntastic_style_warning_symbol = ' ⚑'
 "let g:syntastic_debug = 3
 let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', '.;') != '' ? ['eslint'] : ['standard']
 
-"highlight link SyntasticErrorSign SignColumn
-"highlight link SyntasticWarningSign SignColumn
-"highlight link SyntasticStyleErrorSign SignColumn
-"highlight link SyntasticStyleWarningSign SignColumn
+hi SignColumn ctermbg=8
+highlight SyntasticErrorSign ctermfg=1 ctermbg=8
+highlight SyntasticWarningSign ctermfg=3 ctermbg=8
+highlight SyntasticStyleErrorSign ctermfg=1 ctermbg=8
+highlight SyntasticStyleWarningSign ctermfg=3 ctermbg=8
 
 "indent guides
 let g:indent_guides_enable_on_vim_startup = 0 "enable on startup
