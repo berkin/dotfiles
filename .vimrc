@@ -104,11 +104,11 @@ let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', '.;') != '' ? ['eslint'] : ['standard']
 
-hi SignColumn ctermbg=8
-highlight SyntasticErrorSign ctermfg=1 ctermbg=8
-highlight SyntasticWarningSign ctermfg=3 ctermbg=8
-highlight SyntasticStyleErrorSign ctermfg=1 ctermbg=8
-highlight SyntasticStyleWarningSign ctermfg=3 ctermbg=8
+hi SignColumn ctermbg=0
+highlight SyntasticErrorSign ctermfg=1 ctermbg=0
+highlight SyntasticWarningSign ctermfg=3 ctermbg=0
+highlight SyntasticStyleErrorSign ctermfg=1 ctermbg=0
+highlight SyntasticStyleWarningSign ctermfg=3 ctermbg=0
 
 "indent guides
 let g:indent_guides_enable_on_vim_startup = 0 "enable on startup
