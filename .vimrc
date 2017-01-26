@@ -21,6 +21,8 @@ set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
+set wildignore+=**/node_modules   " ignores node_modules
+
 "Invisible character colors
 highlight NonText ctermfg=10 ctermbg=8 guibg=white
 highlight SpecialKey ctermfg=10 ctermbg=8 guibg=white
