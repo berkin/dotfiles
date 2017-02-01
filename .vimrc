@@ -54,6 +54,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
