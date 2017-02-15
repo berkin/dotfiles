@@ -1,0 +1,5 @@
+--ignore-dir=public
+
+--type-set=handlebars=.handlebars
+--type-set=mustache=.mustache
+
