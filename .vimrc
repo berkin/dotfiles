@@ -23,6 +23,10 @@ set showbreak=↪
 
 set wildignore+=**/node_modules,*/dist/**   " ignores node_modules
 
+
+" Trigger autoread when changing buffers or coming back to vim in terminal.
+au FocusGained,BufEnter * :silent! !
+
 "Invisible character colors
 highlight NonText ctermfg=10 ctermbg=8 guibg=white
 highlight SpecialKey ctermfg=10 ctermbg=8 guibg=white
