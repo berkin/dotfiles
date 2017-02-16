@@ -104,6 +104,9 @@ set linespace=0
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
+" youcompleteme bg color
+highlight Pmenu ctermfg=0 ctermbg=14
+
 " syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
