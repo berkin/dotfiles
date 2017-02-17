@@ -133,6 +133,7 @@ highlight SyntasticWarningSign ctermfg=3 ctermbg=0
 highlight SyntasticStyleErrorSign ctermfg=1 ctermbg=0
 highlight SyntasticStyleWarningSign ctermfg=3 ctermbg=0
 
+
 "indent guides
 let g:indent_guides_enable_on_vim_startup = 0 "enable on startup
 set ts=2 sw=2 et
@@ -147,6 +148,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=white	 ctermbg=8
 " Nerdtree
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
+let NERDTreeShowHidden = 1
 
 " Nerdtree quit if it last pane
 function! NERDTreeQuit()

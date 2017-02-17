@@ -185,7 +185,7 @@ function battery_charge {
 }
 
 function spotify {
-  . ~/bin/spotify status
+#  . ~/bin/spotify status
 }
 
 ## Main prompt
