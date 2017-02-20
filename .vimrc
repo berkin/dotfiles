@@ -149,6 +149,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=white	 ctermbg=8
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let NERDTreeShowHidden = 1
+let NERDTreeIgnore = ['\.DS_Store$']
 
 " Nerdtree quit if it last pane
 function! NERDTreeQuit()
