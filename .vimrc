@@ -22,6 +22,7 @@ set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
 set wildignore+=**/node_modules,*/dist/**   " ignores node_modules
+set ignorecase
 
 set cursorline    " highlight the current line
 
