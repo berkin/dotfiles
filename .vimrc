@@ -165,7 +165,9 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.DS_Store$']
-map <silent> <C-n> :NERDTreeToggle<CR>
+nmap ,f :NERDTreeFind<CR>
+nmap ,t :NERDTreeToggle<CR>
+nmap ,c :NERDTreeCWD<CR>
 
 " Nerdtree quit if it last pane
 function! NERDTreeQuit()
