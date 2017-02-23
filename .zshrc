@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/berkin/.oh-my-zsh
-
+cd devel
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -32,7 +32,7 @@ ZSH_THEME="agnoster"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -88,6 +88,7 @@ alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias comeon="cd ~/devel/comeon-mobile/comeon-mobile-view/src/main/app"
 alias dotfiles="cd ~/devel/dotfiles"
 alias doc="cd ~/devel/document-everything"
+alias resume="cd ~/devel/resume"
 
 
 # battery charge, online check
