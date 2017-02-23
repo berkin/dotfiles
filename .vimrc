@@ -27,11 +27,11 @@ set ignorecase
 set cursorline    " highlight the current line
 
 " Trigger autoread when changing buffers or coming back to vim in terminal.
-au FocusGained,BufEnter * :silent! !
+"au FocusGained,BufEnter * :silent! !
 
 " Save whenever switching windows or leaving vim. This is useful when running
 " the tests inside vim without having to save all files first.
-au FocusLost,WinLeave * :silent! wa
+"au FocusLost,WinLeave * :silent! wa
 
 "Invisible character colors
 highlight NonText ctermfg=10 ctermbg=8 guibg=white
@@ -102,6 +102,8 @@ let g:airline_theme='papercolor'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set linespace=0
+
+
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
@@ -151,6 +153,7 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.DS_Store$']
+map <silent> <C-n> :NERDTreeToggle<CR>
 
 " Nerdtree quit if it last pane
 function! NERDTreeQuit()
