@@ -88,6 +88,18 @@ map <F10> :bnext<CR>
 
 "ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+function! CtrlPCommand()
+    let c = 0
+    let wincount = winnr('$')
+    " Don't open it here if current buffer is not writable (e.g. NERDTree)
+    while !empty(getbufvar(+expand("<abuf>"), "&buftype")) && c < wincount
+        exec 'wincmd w'
+        let c = c + 1
+    endwhile
+    exec 'CtrlP'
+endfunction
+
+let g:ctrlp_cmd = 'call CtrlPCommand()'
 
 " ack
 " map Ack! to Ack
