@@ -109,7 +109,7 @@ autocmd VimEnter * wincmd p
 
 " youcompleteme bg color
 highlight Pmenu ctermfg=0 ctermbg=14
-
+let g:ycm_path_to_python_interpreter="/usr/bin/python"
 " syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
