@@ -9,3 +9,4 @@
 - [ ] semantic hightlight plugin added, but should run on startup. also colors must be set according to theme.
 - [ ] i dont like the contrast level of solarized, find sth else. 
 - [ ] is is possible to use terminal with transparent and vim not.
+- [ ] add custom ctrlp ignore file for project
