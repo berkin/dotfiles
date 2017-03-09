@@ -68,7 +68,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'hjson/vim-hjson'
 Plugin 'tpope/vim-surround'
 Plugin 'flowtype/vim-flow'
-
+Plugin 'Quramy/vim-js-pretty-template'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -198,6 +198,8 @@ autocmd WinEnter * call NERDTreeQuit()
 au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
+" js pretty template
+autocmd FileType javascript JsPreTmpl html
 
 " Delete buffer while keeping window layout (don't close buffer's windows).
 " Version 2008-11-18 from http://vim.wikia.com/wiki/VimTip165
