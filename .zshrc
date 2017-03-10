@@ -9,6 +9,9 @@ cd devel
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
+# change to vi mode
+bindkey -v
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
