@@ -1,6 +1,6 @@
 syntax on
-set background=dark
-colorscheme solarized
+"set background=dark
+colorscheme nord
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -34,8 +34,8 @@ set cursorline    " highlight the current line
 "au FocusLost,WinLeave * :silent! wa
 
 "Invisible character colors
-highlight NonText ctermfg=10 ctermbg=8 guibg=white
-highlight SpecialKey ctermfg=10 ctermbg=8 guibg=white
+"highlight NonText ctermfg=10 ctermbg=8 guibg=white
+"highlight SpecialKey ctermfg=10 ctermbg=8 guibg=white
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -69,6 +69,7 @@ Plugin 'hjson/vim-hjson'
 Plugin 'tpope/vim-surround'
 Plugin 'flowtype/vim-flow'
 Plugin 'Quramy/vim-js-pretty-template'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -109,7 +110,7 @@ nnoremap <Leader>a :Ack!<Space>
 
 let g:vim_markdown_folding_disabled = 1
 let g:solarized_termcolors = 256
-let g:airline_theme='papercolor'
+let g:airline_theme='bubblegum'
 
 " air-line
 let g:airline_powerline_fonts = 1
