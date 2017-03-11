@@ -109,7 +109,7 @@ cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
 let g:vim_markdown_folding_disabled = 1
-let g:solarized_termcolors = 256
+"let g:solarized_termcolors = 256
 let g:airline_theme='bubblegum'
 
 " air-line
