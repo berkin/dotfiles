@@ -151,7 +151,7 @@ highlight SyntasticStyleErrorSign ctermfg=1 ctermbg=0
 highlight SyntasticStyleWarningSign ctermfg=3 ctermbg=0
 
 
-"indent guides
+" indent guides
 let g:indent_guides_enable_on_vim_startup = 0 "enable on startup
 set ts=2 sw=2 et
 let g:indent_guides_start_level = 2
@@ -161,6 +161,9 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=white	 ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=white	 ctermbg=8
+
+" flow
+let g:flow#autoclose = 1
 
 " Nerdtree
 let g:NERDTreeDirArrowExpandable = ''
