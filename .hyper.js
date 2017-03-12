@@ -90,7 +90,8 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg
 	hyperTabs: {
-		tabsIconsColored: true
+		tabIconsColored: true,
+		activityColor: 'salmon'
 	}
   },
 
