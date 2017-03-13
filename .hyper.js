@@ -25,7 +25,7 @@ module.exports = {
     css: '',
 
     // custom css to embed in the terminal window
-    termCSS: 'x-row { line-height: 21px }',
+    termCSS: 'x-row { line-height: 21px }, x-row span { width: auto!important }',
 
     // set to `true` (without backticks) if you're using a Linux setup that doesn't show native menus
     // default: `false` on Linux, `true` on Windows (ignored on macOS)
@@ -104,10 +104,10 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-tabs-enhanced"],
+  plugins: ["nord-hyper","hyper-tabs-enhanced"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: ["nord-hyper"]
+  localPlugins: []
 };
