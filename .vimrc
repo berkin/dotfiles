@@ -26,6 +26,10 @@ set ignorecase
 
 set cursorline    " highlight the current line
 
+" hyper.js first line
+set t_RV=
+
+
 " Trigger autoread when changing buffers or coming back to vim in terminal.
 "au FocusGained,BufEnter * :silent! !
 
