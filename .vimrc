@@ -102,7 +102,7 @@ function! CtrlPCommand()
         exec 'wincmd w'
         let c = c + 1
     endwhile
-    exec 'CtrlP'
+    exec 'CtrlPMRU'
 endfunction
 
 let g:ctrlp_cmd = 'call CtrlPCommand()'
