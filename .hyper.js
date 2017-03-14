@@ -95,19 +95,22 @@ module.exports = {
 	},
 	nordHyper: {
 		cursorColor: 'rgba(209, 59, 130, .8)'
+	},
+	paneNavigation: {
+		showIndicators: false, // Show pane number
 	}
   },
 
-  // a list of plugins to fetch and install from npm
-  // format: [@org/]project[#version]
-  // examples:
-  //   `hyperpower`
-  //   `@company/project`
-  //   `project#1.0.1`
-  plugins: ["nord-hyper", "hyper-tabs-enhanced", "hyper-pane"],
+	// a list of plugins to fetch and install from npm
+	// format: [@org/]project[#version]
+	// examples:
+	//   `hyperpower`
+	//   `@company/project`
+	//   `project#1.0.1`
+	plugins: ["nord-hyper", "hyper-tabs-enhanced", "hyper-pane"],
 
-  // in development, you can create a directory under
-  // `~/.hyper_plugins/local/` and include it here
-  // to load it and avoid it being `npm install`ed
-  localPlugins: []
+	// in development, you can create a directory under
+	// `~/.hyper_plugins/local/` and include it here
+	// to load it and avoid it being `npm install`ed
+	localPlugins: []
 };
