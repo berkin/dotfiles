@@ -8,3 +8,4 @@
 - [ ] add screenshot of terminal and vim 
 - [ ] is is possible to use terminal with transparent and vim not.
 - [ ] add custom ctrlp ignore file for project
+- [ ] is it possible to change cursor color according to mode in vim

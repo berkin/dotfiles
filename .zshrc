@@ -208,7 +208,7 @@ TRAPALRM() {
     zle reset-prompt
 }
 
-RPROMPT='$(spotify) $(prompt_online) $(battery_charge)'
+RPROMPT='$(prompt_online) $(battery_charge)'
 
 PROMPT='%{%f%b%k%}$(build_prompt)
 %D{%e %b %L:%M} %{%F{green}%}❯ '
