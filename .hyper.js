@@ -25,7 +25,7 @@ module.exports = {
     css: '',
 
     // custom css to embed in the terminal window
-    termCSS: 'x-row { line-height: 21px }, x-row span { width: auto!important }',
+    termCSS: 'x-row { line-height: 21px } x-row .unicode-node { width: auto!important; font-weight: 700; overflow: hidden; }',
 
     // set to `true` (without backticks) if you're using a Linux setup that doesn't show native menus
     // default: `false` on Linux, `true` on Windows (ignored on macOS)
@@ -94,7 +94,7 @@ module.exports = {
 		activityColor: 'salmon'
 	},
 	nordHyper: {
-		cursorColor: 'rgb(209, 59, 130)'
+		cursorColor: 'rgba(209, 59, 130, .8)'
 	}
   },
 
@@ -104,7 +104,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["nord-hyper","hyper-tabs-enhanced"],
+  plugins: ["nord-hyper", "hyper-tabs-enhanced"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

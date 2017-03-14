@@ -60,7 +60,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mustache/vim-mustache-handlebars'
@@ -73,6 +72,7 @@ Plugin 'hjson/vim-hjson'
 Plugin 'tpope/vim-surround'
 Plugin 'flowtype/vim-flow'
 Plugin 'Quramy/vim-js-pretty-template'
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -88,7 +88,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
+map <F8> :Bclose<CR>
 map <F9> :bprevious<CR>
 map <F10> :bnext<CR>
 

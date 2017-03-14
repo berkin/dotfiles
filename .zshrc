@@ -97,7 +97,7 @@ alias resume="cd ~/devel/resume"
 # battery charge, online check
 
 CURRENT_BG='NONE'
-#SEGMENT_SEPARATOR='⮀'
+SEGMENT_SEPARATOR=''
 
 ONLINE='%{%F{green}%}'
 OFFLINE='%{%F{red}%}'
