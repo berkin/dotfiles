@@ -106,6 +106,7 @@ function! CtrlPCommand()
 endfunction
 
 let g:ctrlp_cmd = 'call CtrlPCommand()'
+let g:ctrlp_show_hidden = 1
 
 " ack
 " map Ack! to Ack
