@@ -11,6 +11,7 @@ set encoding=utf-8
 set relativenumber
 set backspace=indent,eol,start
 set clipboard=unnamed
+set lazyredraw
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
