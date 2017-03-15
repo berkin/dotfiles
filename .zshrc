@@ -8,7 +8,6 @@ cd devel
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
-
 # change to vi mode
 bindkey -v
 
@@ -97,7 +96,7 @@ alias resume="cd ~/devel/resume"
 # battery charge, online check
 
 CURRENT_BG='NONE'
-SEGMENT_SEPARATOR=''
+#SEGMENT_SEPARATOR=''
 
 ONLINE='%{%F{green}%}'
 OFFLINE='%{%F{red}%}'
