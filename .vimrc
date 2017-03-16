@@ -3,7 +3,7 @@ syntax on
 colorscheme nord
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype off
 
 set ruler
 set number
@@ -27,7 +27,7 @@ set wildignore+=**/dist/*
 set wildignore+=**/.git/*
 set wildignore+=**/.idea/*
 set wildignore+=**/target/*
-set wildignore+=**/casinostugan/*
+so ~/.vim/workignore.vim
 set ignorecase
 
 set cursorline    " highlight the current line
