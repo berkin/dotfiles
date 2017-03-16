@@ -22,7 +22,9 @@ set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
-set wildignore+=**/node_modules,*/dist/**   " ignores node_modules
+set wildignore+=**/node_modules   " ignores node_modules
+set wildignore+=**/dist
+set wildignore+=**/.git
 set ignorecase
 
 set cursorline    " highlight the current line
@@ -94,7 +96,6 @@ map <F9> :bprevious<CR>
 map <F10> :bnext<CR>
 
 "ctrlp
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 function! CtrlPCommand()
     let c = 0
     let wincount = winnr('$')

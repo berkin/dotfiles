@@ -25,7 +25,36 @@ module.exports = {
     css: '',
 
     // custom css to embed in the terminal window
-    termCSS: 'x-row { line-height: 21px } x-row .unicode-node { width: auto!important; font-weight: 600; }',
+    termCSS: `
+		x-row {
+			line-height: 21px
+		}
+		x-row .unicode-node {
+			width: auto !important;
+		}
+		x-row .unicode-node-,
+		x-row .unicode-node- {
+			text-indent: -9999px;
+			width: 7.8265625px
+		}
+		x-row .unicode-node-:after,
+		x-row .unicode-node-:after {
+			content: ' ';
+			text-indent: 0;
+			border-top: 10px solid transparent;
+			border-bottom: 11px solid transparent;
+			width: 0;
+			height: 0;
+		}
+		x-row .unicode-node-:after {
+			border-left: 7px solid;
+			float: left;
+		}
+		x-row .unicode-node-:after {
+			border-right: 7px solid;
+			float: right;
+		}
+	  `,
 
     // set to `true` (without backticks) if you're using a Linux setup that doesn't show native menus
     // default: `false` on Linux, `true` on Windows (ignored on macOS)
