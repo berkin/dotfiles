@@ -98,6 +98,9 @@ map <F8> :Bclose<CR>
 map <F9> :bprevious<CR>
 map <F10> :bnext<CR>
 
+" vim session
+let g:session_autoload = 'no'
+
 "ctrlp
 function! CtrlPCommand()
     let c = 0
