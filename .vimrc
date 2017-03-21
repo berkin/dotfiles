@@ -12,6 +12,7 @@ set relativenumber
 set backspace=indent,eol,start
 set clipboard=unnamed
 set lazyredraw
+set hlsearch
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
