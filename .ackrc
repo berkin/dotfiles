@@ -1,4 +1,5 @@
 --ignore-dir=public
+--ignore-dir=dist
 
 --type-set=handlebars=.handlebars
 --type-set=mustache=.mustache
