@@ -121,6 +121,9 @@ let g:ctrlp_show_hidden = 1
 " map Ack! to Ack
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+let g:ack_autoclose = 1
+let g:ack_mappings = {'v':  '<C-W><CR><C-W>L<C-W>p<C-W>J<C-W>p', 'gv': '<C-W><CR><C-W>L<C-W>p<C-W>J'}
+
 
 let g:vim_markdown_folding_disabled = 1
 "let g:solarized_termcolors = 256

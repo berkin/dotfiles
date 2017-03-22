@@ -1,6 +1,21 @@
 --ignore-dir=public
 --ignore-dir=dist
 
+--ignore-dir=.idea
+--ignore-dir=node_modules
+
+--type-set=minifiedjs=.min.js
+--nominifiedjs
+
+--color
+
+--smart-case
+
 --type-set=handlebars=.handlebars
 --type-set=mustache=.mustache
+--type-set=json=.json
+--type-set=md=.md,.mdown,.markdown
+
+# vi/vim swap files
+--ignore-file=match:/[._].*\.swp$/
 
