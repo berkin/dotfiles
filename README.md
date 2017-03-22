@@ -5,6 +5,7 @@
 
 # todo
 
+- [ ] hyper tab enhance can't find vim icon
 - [ ] add screenshot of terminal and vim 
 - [ ] is is possible to use terminal with transparent and vim not.
 - [ ] add custom ctrlp ignore file for project
