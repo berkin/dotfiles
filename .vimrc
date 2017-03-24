@@ -13,6 +13,10 @@ set backspace=indent,eol,start
 set clipboard=unnamed
 set lazyredraw
 set hlsearch
+" Persistent undo
+set undofile
+set undolevels=1000
+set undoreload=10000
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
