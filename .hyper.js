@@ -35,7 +35,7 @@ module.exports = {
 		x-row .unicode-node-,
 		x-row .unicode-node- {
 			text-indent: -9999px;
-			width: 7.8265625px
+			width: 7.8265625px;
 		}
 		x-row .unicode-node-:after,
 		x-row .unicode-node-:after {
@@ -141,8 +141,7 @@ module.exports = {
         "hyper-tabs-enhanced",
         "hyper-pane",
         "hyperlayout",
-        "hyperterm-tab-numbers",
-        "hyperlinks"
+        "hyperterm-tab-numbers"
     ],
 
 	// in development, you can create a directory under
