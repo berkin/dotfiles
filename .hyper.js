@@ -141,7 +141,8 @@ module.exports = {
         "hyper-tabs-enhanced",
         "hyper-pane",
         "hyperlayout",
-        "hyperterm-tab-numbers"
+        "hyperterm-tab-numbers",
+        "hyperlinks"
     ],
 
 	// in development, you can create a directory under
