@@ -3,6 +3,7 @@
 
 --ignore-dir=.idea
 --ignore-dir=node_modules
+--ignore-dir=lib
 
 --type-set=minifiedjs=.min.js
 --nominifiedjs
