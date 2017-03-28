@@ -32,6 +32,7 @@ set wildignore+=**/dist/*
 set wildignore+=**/.git/*
 set wildignore+=**/.idea/*
 set wildignore+=**/target/*
+set wildignore+=**/lib/*
 so ~/.vim/workignore.vim
 set ignorecase
 
