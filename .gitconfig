@@ -9,13 +9,23 @@
 	push-fast = "!f(){ git add . && git commit -m \"$1\" && git status; };f"
 
 	# Unstage changes from the index
-    unstage = reset HEAD --
+	unstage = reset HEAD --
+
+[url "https://bitbucket.org/"]
+    insteadOf = bb:
+
+[url "https://github.com/"]
+    insteadOf = gh:
+
+[url "https://gist.github.com/"]
+	insteadOf = gist:
+
 [color]
     ui = true
 
 [color "branch"]
     current = yellow reverse
-    local = yello
+    local = yellow
     remote = green
 
 [color "diff"]
