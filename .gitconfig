@@ -4,4 +4,27 @@
 [alias]
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	push-fast = "!f(){ git add . && git commit -m \"$1\" && git push; };f"
+
+	# add all files, commit and push
+	push-fast = "!f(){ git add . && git commit -m \"$1\" && git status; };f"
+
+	# Unstage changes from the index
+    unstage = reset HEAD --
+[color]
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yello
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = red
