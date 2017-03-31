@@ -30,6 +30,8 @@ module.exports = {
 			line-height: 21px
 		}
 		x-row .unicode-node {
+			display: inline-block;
+			vertical-align: top;
 			width: auto !important;
 		}
 		x-row .unicode-node-,
@@ -141,7 +143,8 @@ module.exports = {
         "hyper-tabs-enhanced",
         "hyper-pane",
         "hyperlayout",
-        "hyperterm-tab-numbers"
+        "hyperterm-tab-numbers",
+        "hypercwd"
     ],
 
 	// in development, you can create a directory under
