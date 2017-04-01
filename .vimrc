@@ -145,7 +145,7 @@ let g:airline#extensions#tabline#left_alt_sep = ' '
 " let g:airline_right_sep = ''
 " let g:airline_right_alt_sep = ''
 
-set linespace = 0
+set linespace=0
 
 
 autocmd VimEnter * NERDTree
