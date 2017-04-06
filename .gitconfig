@@ -7,9 +7,6 @@
 
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
-	# https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt
-	 undo = reset --soft HEAD^
-
 	# Unstage changes from the index
 	unstage = reset HEAD --
 
@@ -24,12 +21,14 @@
 
 	showtool = "!f() { git difftool $1^ $1; }; f"
 	added = difftool --cached
+
 [status]
   showUntrackedFiles = all
   # Sometimes a newly-added folder, since it's only one line in git status, can slip under the radar.
   # https://git-scm.com/docs/git-config#git-config-statusshowUntrackedFiles
 
 # A nice little github-like colorful, split diff right in the console.
+# brew install icdiff
 # via http://owen.cymru/github-style-diff-in-terminal-with-icdiff/
 [diff]
   tool = icdiff
