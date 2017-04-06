@@ -5,14 +5,40 @@
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+
+	# https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt
+	 undo = reset --soft HEAD^
+
+	# Unstage changes from the index
+	unstage = reset HEAD --
+
+	# We wanna grab those pesky un-added files!
+	stash-all = stash save --include-untracked
+
 	# add all files, commit and push
 	push-fast = "!f(){ git add . && git commit -m \"$1\" && git status; };f"
 
 	# smart chekcout: stash changes, checkout branch, pop from stash
 	smart-checkout = "!f(){ git stash && git checkout \"$1\" && git stash pop; };f"
 
-	# Unstage changes from the index
-	unstage = reset HEAD --
+	showtool = "!f() { git difftool $1^ $1; }; f"
+	added = difftool --cached
+[status]
+  showUntrackedFiles = all
+  # Sometimes a newly-added folder, since it's only one line in git status, can slip under the radar.
+  # https://git-scm.com/docs/git-config#git-config-statusshowUntrackedFiles
+
+# A nice little github-like colorful, split diff right in the console.
+# via http://owen.cymru/github-style-diff-in-terminal-with-icdiff/
+[diff]
+  tool = icdiff
+[difftool]
+  prompt = false
+[difftool "icdiff"]
+	cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+[pager]
+	difftool = true
 
 [url "https://bitbucket.org/"]
     insteadOf = bb:
