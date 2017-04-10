@@ -86,6 +86,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'flowtype/vim-flow'
 Plugin 'Quramy/vim-js-pretty-template'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'gioele/vim-autoswap'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
