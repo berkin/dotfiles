@@ -4,3 +4,7 @@ export PATH=$PATH:$MAVEN_HOME/bin
 export ACKRC=".ackrc"
 # install vim with "brew install vim" to provide clipboard support and add alias
 alias vim="/usr/local/bin/vim"
+
+for file in ~/.{functions}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;

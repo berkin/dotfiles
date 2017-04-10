@@ -5,6 +5,10 @@ colorscheme nord
 set nocompatible              " be iMproved, required
 filetype off
 
+let &runtimepath.=',~/.vim/bundle/ale'
+
+filetype plugin on
+
 set ruler
 set number
 set encoding=utf-8
@@ -73,7 +77,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -87,6 +91,10 @@ Plugin 'flowtype/vim-flow'
 Plugin 'Quramy/vim-js-pretty-template'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'gioele/vim-autoswap'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'ap/vim-css-color'
+Plugin 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -162,26 +170,39 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_error_symbol = ''
-let g:syntastic_warning_symbol = ''
-let g:syntastic_style_error_symbol = ''
-let g:syntastic_style_warning_symbol = ''
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_loc_list_height = 5
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 1
+" let g:syntastic_error_symbol = ''
+" let g:syntastic_warning_symbol = ''
+" let g:syntastic_style_error_symbol = ''
+" let g:syntastic_style_warning_symbol = ''
 "let g:syntastic_debug = 3
-let g:syntastic_json_checkers = ['jsonlint']
-let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
-autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', '.;') != '' ? ['eslint'] : ['standard']
+" let g:syntastic_json_checkers = ['jsonlint']
+" let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
+" autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', '.;') != '' ? ['eslint'] : ['standard']
 
-hi SignColumn ctermbg=0
-highlight SyntasticErrorSign ctermfg=1 ctermbg=0
-highlight SyntasticWarningSign ctermfg=3 ctermbg=0
-highlight SyntasticStyleErrorSign ctermfg=1 ctermbg=0
-highlight SyntasticStyleWarningSign ctermfg=3 ctermbg=0
+" hi SignColumn ctermbg=0
+" highlight SyntasticErrorSign ctermfg=1 ctermbg=0
+" highlight SyntasticWarningSign ctermfg=3 ctermbg=0
+" highlight SyntasticStyleErrorSign ctermfg=1 ctermbg=0
+" highlight SyntasticStyleWarningSign ctermfg=3 ctermbg=0
 
+" ale
+" show signcolumn always
+autocmd BufEnter * sign define dummy
+autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+
+let g:ale_linters = {
+\	'javascript': ['eslint'],
+\	}
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+highlight SignColumn ctermbg=0
+highlight ALEErrorSign ctermfg=1 ctermbg=0
+highlight ALEWarningSign ctermfg=3 ctermbg=0
 
 " indent guides
 let g:indent_guides_enable_on_vim_startup = 0 "enable on startup
