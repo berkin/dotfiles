@@ -98,7 +98,6 @@ alias resume="cd ~/devel/resume"
 # battery charge, online check
 
 CURRENT_BG='NONE'
-#SEGMENT_SEPARATOR=''
 
 ONLINE='%{%F{green}%}'
 OFFLINE='%{%F{red}%}'
@@ -189,10 +188,6 @@ function battery_charge {
   echo `~/bin/batcharge.py`
 }
 
-function spotify {
-#  . ~/bin/spotify status
-}
-
 ## Main prompt
 build_prompt() {
   RETVAL=$?
@@ -209,7 +204,7 @@ TRAPALRM() {
     zle reset-prompt
 }
 
-RPROMPT='$(prompt_online) $(battery_charge)'
+# RPROMPT='$(prompt_online) $(battery_charge)'
 
 PROMPT='%{%f%b%k%}$(build_prompt)
 %D{%e %b %L:%M} %{%F{green}%}❯ '
