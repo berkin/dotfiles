@@ -21,6 +21,7 @@ set hlsearch
 set undofile
 set undolevels=1000
 set undoreload=10000
+set updatetime=250
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
@@ -95,6 +96,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'ap/vim-css-color'
 Plugin 'w0rp/ale'
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -193,17 +195,27 @@ set statusline+=%*
 " ale
 " show signcolumn always
 " couldn't find a way exclude nerdtree
-autocmd BufEnter *.js,*.jsx,*.html,*.json sign define dummy
-autocmd BufEnter *.js,*.jsx,*.html,*.json execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+" autocmd BufEnter *.js,*.jsx,*.html,*.json sign define dummy
+" autocmd BufEnter *.js,*.jsx,*.html,*.json execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+
 
 let g:ale_linters = {
 \	'javascript': ['eslint'],
 \	}
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
-highlight SignColumn ctermbg=0
-highlight ALEErrorSign ctermfg=1 ctermbg=0
-highlight ALEWarningSign ctermfg=3 ctermbg=0
+highlight clear SignColumn
+highlight ALEErrorSign ctermfg=1
+highlight ALEWarningSign ctermfg=3
+
+" git gutter
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_eager = 1
+"highlight GitGutterAdd ctermbg=0
+"highlight GitGutterChange ctermbg=0
+"highlight GitGutterDelete ctermbg=0
+"highlight GitGutterChangeDelete ctermbg=0
+
 
 " indent guides
 let g:indent_guides_enable_on_vim_startup = 0 "enable on startup
