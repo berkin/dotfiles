@@ -253,7 +253,7 @@ let NERDTreeIgnore = ['\.DS_Store$']
 let NERDTreeMinimalUI = 1
 
 nmap <Leader>f :NERDTreeFind<CR>
-nmap <Leader>t :NERDTreeToggle<CR>
+nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>c :NERDTreeCWD<CR>
 
 " Nerdtree quit if it last pane
