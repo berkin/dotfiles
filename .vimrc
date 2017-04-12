@@ -17,6 +17,7 @@ set backspace=indent,eol,start
 set clipboard=unnamed
 set lazyredraw
 set hlsearch
+set nowrap
 " Persistent undo
 set undofile
 set undolevels=1000
@@ -80,7 +81,6 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jelera/vim-javascript-syntax'
 " Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
@@ -97,6 +97,7 @@ Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'ap/vim-css-color'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -115,6 +116,7 @@ filetype plugin indent on    " required
 map <F8> :Bclose<CR>
 map <F9> :bprevious<CR>
 map <F10> :bnext<CR>
+let mapleader = ","
 
 " FastEscape {{{
 " Speed up transition from modes
@@ -248,15 +250,18 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.DS_Store$']
-nmap ,f :NERDTreeFind<CR>
-nmap ,t :NERDTreeToggle<CR>
-nmap ,c :NERDTreeCWD<CR>
+let NERDTreeMinimalUI = 1
+
+nmap <Leader>f :NERDTreeFind<CR>
+nmap <Leader>t :NERDTreeToggle<CR>
+nmap <Leader>c :NERDTreeCWD<CR>
 
 " Nerdtree quit if it last pane
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+au BufRead,BufNewFile *.mustache setfiletype mustache
 
 " js pretty template
 autocmd FileType javascript JsPreTmpl html
