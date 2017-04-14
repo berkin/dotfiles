@@ -93,7 +93,7 @@ alias comeon="cd ~/devel/comeon-mobile/comeon-mobile-view/src/main/app"
 alias dotfiles="cd ~/devel/dotfiles"
 alias doc="cd ~/devel/document-everything"
 alias resume="cd ~/devel/resume"
-
+alias pimp="cd ~/devel/pimp-my-wallpaper"
 
 # battery charge, online check
 
