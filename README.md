@@ -1,3 +1,7 @@
+# current look
+![](screenshots/terminal.png)
+![](screenshots/vim.png)
+
 # dotfiles
 
 - symlink all the files and folder from this repo.
