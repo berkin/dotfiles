@@ -97,6 +97,7 @@ Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'ap/vim-css-color'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 Plugin 'mustache/vim-mustache-handlebars'
 
 " All of your Plugins must be added before the following line
