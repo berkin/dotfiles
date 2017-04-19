@@ -22,7 +22,7 @@ set nowrap
 set undofile
 set undolevels=1000
 set undoreload=10000
-set updatetime=250
+set updatetime=500
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
@@ -79,7 +79,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 " Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -148,7 +150,7 @@ function! CtrlPCommand()
 endfunction
 
 let g:ctrlp_cmd = 'call CtrlPCommand()'
-let g:ctrlp_show_hidden = 1
+"let g:ctrlp_show_hidden = 1
 
 " The Silver Searcher
 if executable('ag')
@@ -156,7 +158,7 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
@@ -173,6 +175,8 @@ cnoreabbrev ag Ack
 cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
+" bind K to grep word under cursor
+nnoremap K :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 let g:vim_markdown_folding_disabled = 1
 "let g:solarized_termcolors = 256
@@ -263,7 +267,24 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=white	 ctermbg=8
 " flow
 let g:flow#autoclose = 1
 
-" Nerdtree
+" vim-javascript
+let g:javascript_plugin_flow = 1
+"let g:javascript_conceal_function             = "ƒ"
+"let g:javascript_conceal_null                 = "ø"
+"let g:javascript_conceal_this                 = "@"
+"let g:javascript_conceal_return               = "⇚"
+"let g:javascript_conceal_undefined            = "¿"
+"let g:javascript_conceal_NaN                  = "ℕ"
+"let g:javascript_conceal_prototype            = "¶"
+"let g:javascript_conceal_static               = "•"
+"let g:javascript_conceal_super                = "Ω"
+"let g:javascript_conceal_arrow_function       = "⇒"
+"let g:javascript_conceal_noarg_arrow_function = "🞅"
+"let g:javascript_conceal_underscore_arrow_function = "🞅"
+"highlight Conceal  ctermfg=10 ctermbg=NONE
+"set conceallevel=1
+"
+"" Nerdtree
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let NERDTreeShowHidden = 1
