@@ -79,8 +79,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
-"Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
+" Plugin 'othree/yajs.vim'
+Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 " Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -252,17 +253,6 @@ let g:gitgutter_eager = 1
 "highlight GitGutterDelete ctermbg=0
 "highlight GitGutterChangeDelete ctermbg=0
 
-
-" indent guides
-let g:indent_guides_enable_on_vim_startup = 0 "enable on startup
-set ts=2 sw=2 et
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-"let g:indent_guides_color_change_percent = 2
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=white	 ctermbg=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=white	 ctermbg=8
 
 " flow
 let g:flow#autoclose = 1
