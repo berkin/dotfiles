@@ -20,7 +20,7 @@
 	stash-all = stash save --include-untracked
 
 	# add all files, commit and push
-	push-fast = "!f(){ git add . && git commit -m \"$1\" && git status; };f"
+	push-fast = "!f(){ git add . && git commit -m \"$1\" && git push; };f"
 
 	# smart chekcout: stash changes, checkout branch, pop from stash
 	smart-checkout = "!f(){ git stash && git checkout \"$1\" && git stash pop; };f"
