@@ -33,10 +33,10 @@ set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
-"set completeopt-=preview
+set completeopt-=preview
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
-autocmd CompleteDone * pclose
+"autocmd CompleteDone * pclose
 
 set wildignore+=**/node_modules/*   " ignores node_modules
 set wildignore+=**/dist/*
