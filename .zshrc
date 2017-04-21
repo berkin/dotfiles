@@ -12,7 +12,7 @@ cd ~/devel
 ZSH_THEME="agnoster"
 # change to vi mode
 bindkey -v
-
+export DYLD_FORCE_FLAT_NAMESPACE=1
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

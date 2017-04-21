@@ -71,7 +71,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-Plugin 'ternjs/tern_for_vim'
+"Plugin 'ternjs/tern_for_vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
@@ -258,7 +258,7 @@ let g:gitgutter_eager = 1
 let g:flow#autoclose = 1
 
 " vim-javascript
-let g:javascript_plugin_flow = 1
+"let g:javascript_plugin_flow = 1
 "let g:javascript_conceal_function             = "ƒ"
 "let g:javascript_conceal_null                 = "ø"
 "let g:javascript_conceal_this                 = "@"
