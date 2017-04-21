@@ -125,7 +125,7 @@ module.exports = {
 		activityColor: 'salmon'
 	},
 	nordHyper: {
-		cursorColor: 'rgba(209, 59, 130, .8)'
+		cursorColor: 'rgb(209, 59, 130)'
 	},
 	paneNavigation: {
 		showIndicators: false, // Show pane number
@@ -140,6 +140,7 @@ module.exports = {
 	//   `project#1.0.1`
 	plugins: [
         "nord-hyper",
+		"hyper-hide-title",
         "hyper-tabs-enhanced",
         "hyper-pane",
         "hyperlayout",

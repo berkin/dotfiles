@@ -18,6 +18,8 @@ set clipboard=unnamed
 set lazyredraw
 set hlsearch
 set nowrap
+set autowrite
+
 " Persistent undo
 set undofile
 set undolevels=1000
@@ -127,6 +129,9 @@ map <F8> :Bclose<CR>
 map <F9> :bprevious<CR>
 map <F10> :bnext<CR>
 let mapleader = " "
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
 
 " FastEscape {{{
 " Speed up transition from modes

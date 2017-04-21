@@ -54,6 +54,10 @@
 [url "https://gist.github.com/"]
 	insteadOf = gist:
 
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+
 [color]
     ui = true
 
