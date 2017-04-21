@@ -33,6 +33,8 @@ set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
+set completeopt-=preview
+
 set wildignore+=**/node_modules/*   " ignores node_modules
 set wildignore+=**/dist/*
 set wildignore+=**/.git/*
