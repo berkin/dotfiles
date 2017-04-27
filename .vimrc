@@ -82,7 +82,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'Valloric/YouCompleteMe'
-"Plugin 'ternjs/tern_for_vim'
+Plugin 'ternjs/tern_for_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
@@ -113,6 +113,7 @@ Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'Townk/vim-autoclose'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
