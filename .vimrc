@@ -55,6 +55,9 @@ set cursorline    " highlight the current line
 " hyper.js first line
 set t_RV=
 
+" map ctrl+c to add system clipboard
+" http://stackoverflow.com/questions/11489428/how-to-make-vim-paste-from-and-copy-to-systems-clipboard
+vnoremap <C-c> "*y
 
 " Trigger autoread when changing buffers or coming back to vim in terminal.
 "au FocusGained,BufEnter * :silent! !
@@ -78,8 +81,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-"Plugin 'ternjs/tern_for_vim'
 Plugin 'Valloric/YouCompleteMe'
+"Plugin 'ternjs/tern_for_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'

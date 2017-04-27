@@ -208,3 +208,5 @@ TRAPALRM() {
 
 PROMPT='%{%f%b%k%}$(build_prompt)
 %D{%e %b %L:%M} %{%F{green}%}❯ '
+
+export PATH="$HOME/.yarn/bin:$PATH"

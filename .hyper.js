@@ -23,7 +23,6 @@ module.exports = {
 
     // custom css to embed in the main window
     css: '',
-
     // custom css to embed in the terminal window
     termCSS: `
 		x-row {
