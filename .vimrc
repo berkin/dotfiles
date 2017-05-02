@@ -82,7 +82,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'ternjs/tern_for_vim'
+" Plugin 'ternjs/tern_for_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
@@ -113,7 +113,9 @@ Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'Townk/vim-autoclose'
+" Plugin 'Townk/vim-autoclose'
+" Plugin 'sbdchd/neoformat'
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -166,6 +168,15 @@ endfunction
 
 let g:ctrlp_cmd = 'call CtrlPCommand()'
 "let g:ctrlp_show_hidden = 1
+
+" neoformat {{{
+"autocmd FileType javascript set formatprg=prettier-eslint\ --stdin
+"autocmd BufWritePre *.js :normal gggqG
+"let g:neoformat_enabled_css = ['csscomb']
+"autocmd BufWritePre *.css :normal gggqG
+"let g:neoformat_try_formatprg = 1
+"let g:neoformat_only_msg_on_error = 1
+" neoformat }}}
 
 " The Silver Searcher
 if executable('ag')
