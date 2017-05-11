@@ -55,6 +55,7 @@ set cursorline    " highlight the current line
 " hyper.js first line
 set t_RV=
 
+
 " map ctrl+c to add system clipboard
 " http://stackoverflow.com/questions/11489428/how-to-make-vim-paste-from-and-copy-to-systems-clipboard
 vnoremap <C-c> "*y
@@ -131,10 +132,15 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+let mapleader = " "
+
+map <F2> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
+map <F3> :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
+map <F4> :exe "resize " . (winheight(0) * 3/2)<CR>
+map <F5> :exe "resize " . (winheight(0) * 2/3)<CR>
 map <F8> :Bclose<CR>
 map <F9> :bprevious<CR>
 map <F10> :bnext<CR>
-let mapleader = " "
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
