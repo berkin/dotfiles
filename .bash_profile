@@ -9,6 +9,6 @@ git-blame() {
   ruby ~/bin/git-blame-colored $1 | less -R
 }
 
-for file in ~/.{functions}; do
+for file in ~/.{extra,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;

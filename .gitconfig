@@ -37,7 +37,7 @@
 # brew install icdiff
 # via http://owen.cymru/github-style-diff-in-terminal-with-icdiff/
 [diff]
-  tool = icdiff
+	tool = vimdiff
 [difftool]
   prompt = false
 [difftool "icdiff"]
