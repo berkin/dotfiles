@@ -117,6 +117,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 " Plugin 'Townk/vim-autoclose'
 " Plugin 'sbdchd/neoformat'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'majutsushi/tagbar'
+Plugin 'craigemery/vim-autotag'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -138,6 +140,7 @@ map <F2> :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 map <F3> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
 map <F4> :exe "resize " . (winheight(0) * 2/3)<CR>
 map <F5> :exe "resize " . (winheight(0) * 3/2)<CR>
+nmap <F7> :TagbarToggle<CR>
 map <F8> :Bclose<CR>
 map <F9> :bprevious<CR>
 map <F10> :bnext<CR>
