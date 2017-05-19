@@ -325,6 +325,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufRead,BufNewFile *.mustache setfiletype mustache
+au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=mustache
 
 " js pretty template
 autocmd FileType javascript JsPreTmpl html
