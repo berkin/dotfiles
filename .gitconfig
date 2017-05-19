@@ -22,6 +22,8 @@
 	# add all files, commit and push
 	push-fast = "!f(){ git add . && git commit -m \"$1\" && git push; };f"
 
+	stash-diff = "!f(){ git stash show -p stash@{$1}; };f"
+
 	# smart chekcout: stash changes, checkout branch, pop from stash
 	smart-checkout = "!f(){ git stash && git checkout \"$1\" && git stash pop; };f"
 
