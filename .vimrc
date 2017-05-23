@@ -19,7 +19,6 @@ set lazyredraw
 set hlsearch
 set nowrap
 set autowrite
-
 " Persistent undo
 set undofile
 set undolevels=1000
@@ -119,6 +118,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'majutsushi/tagbar'
 Plugin 'craigemery/vim-autotag'
+Plugin 'tpope/vim-dispatch'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -204,6 +204,7 @@ endif
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 let g:ack_autoclose = 1
+let g:ack_use_dispatch = 1
 let g:ack_mappings = {'v':  '<C-W><CR><C-W>L<C-W>p<C-W>J<C-W>p', 'gv': '<C-W><CR><C-W>L<C-W>p<C-W>J'}
 let g:ackprg = 'ag --vimgrep --smart-case'
 cnoreabbrev ag Ack
