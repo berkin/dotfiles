@@ -57,7 +57,7 @@
 	insteadOf = gist:
 
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = /Users/berkin/.gitignore_global
   autocrlf = input
 
 [color]
