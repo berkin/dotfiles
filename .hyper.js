@@ -139,12 +139,13 @@ module.exports = {
 	//   `project#1.0.1`
 	plugins: [
         "nord-hyper",
-		"hyper-hide-title",
+        "hyper-hide-title",
         "hyper-tabs-enhanced",
         "hyper-pane",
         "hyperlayout",
         "hyperterm-tab-numbers",
-        "hypercwd"
+        "hypercwd",
+        "hyperterm-tabs"
     ],
 
 	// in development, you can create a directory under
