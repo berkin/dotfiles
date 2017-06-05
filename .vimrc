@@ -142,7 +142,7 @@ map <F2> :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 map <F3> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
 map <F4> :exe "resize " . (winheight(0) * 2/3)<CR>
 map <F5> :exe "resize " . (winheight(0) * 3/2)<CR>
-noremap <F3> :Autoformat<CR>
+noremap <F6> :Autoformat<CR>
 nmap <F7> :TagbarToggle<CR>
 map <F8> :Bclose<CR>
 map <F9> :bprevious<CR>
