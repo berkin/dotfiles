@@ -4,3 +4,6 @@
 --exclude=node_modules/*
 --exclude=db/*
 --exclude=log/*
+--exclude=lib/*
+--exclude=coverage/*
+--exclude=dist/*
