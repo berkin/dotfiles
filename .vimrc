@@ -354,6 +354,17 @@ au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufRead,BufNewFile *.mustache setfiletype mustache
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=mustache
+" change the default dictionary mappings for file extension matches
+
+" dev icons
+let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.editorconfig'] = 'ƛ'
+
+" add or override pattern matches for filetypes
+" these take precedence over the file extensions
+
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*babel.*\.js$'] = 'ƛ'
 
 " js pretty template
 autocmd FileType javascript JsPreTmpl html
