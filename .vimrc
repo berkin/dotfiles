@@ -330,11 +330,18 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 endfunction
 
 call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('config', 'red', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('info', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('config', 'green', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('ignore', 'red', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('lock', 'green', 'none', 'yellow', '#151515')
 call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
 call NERDTreeHighlightFile('json', 'magenta', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('xml', 'magenta', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('yml', 'magenta', 'none', 'yellow', '#151515')
 call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('scss', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('js', 'yellow', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('jsx', 'blue', 'none', '#ffa500', '#151515')
 
 nmap <Leader>f :NERDTreeFind<CR>
 nmap <Leader>n :NERDTreeToggle<CR>
@@ -352,6 +359,7 @@ au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=mustache
 " dev icons
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.editorconfig'] = 'ƛ'
+let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.babelrc'] = ''
 
 " add or override pattern matches for filetypes
 " these take precedence over the file extensions
