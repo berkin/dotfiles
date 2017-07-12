@@ -142,10 +142,10 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 let mapleader = " "
 
-map <F2> :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
-map <F3> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
-map <F4> :exe "resize " . (winheight(0) * 2/3)<CR>
-map <F5> :exe "resize " . (winheight(0) * 3/2)<CR>
+map <F2> :exe "vertical resize -10"<CR>
+map <F3> :exe "vertical resize +10"<CR>
+map <F4> :exe "resize -10"<CR>
+map <F5> :exe "resize +10"<CR>
 noremap <F6> :Autoformat<CR>
 nmap <F7> :TagbarToggle<CR>
 map <F8> :Bclose<CR>
