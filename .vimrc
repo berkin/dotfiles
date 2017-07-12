@@ -237,9 +237,13 @@ let g:airline#extensions#tabline#left_alt_sep = ' '
 
 set linespace=0
 
-
+set laststatus=2
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+
+" airline refresh hack for nerdtree
+autocmd VimEnter * AirlineRefresh
+autocmd VimEnter * AirlineRefresh
 
 " youcompleteme bg color
 highlight Pmenu ctermfg=0 ctermbg=14
@@ -442,3 +446,5 @@ function! s:Bclose(bang, buffer)
 endfunction
 command! -bang -complete=buffer -nargs=? Bclose call s:Bclose('<bang>', '<args>')
 nnoremap <silent> <Leader>bd :Bclose<CR>
+
+
