@@ -354,6 +354,19 @@ nmap <Leader>c :NERDTreeCWD<CR>
 " Nerdtree quit if it last pane
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+"let g:NERDTreeIndicatorMapCustom = {
+"    \ "Modified"  : "˜",
+"    \ "Staged"    : "",
+"    \ "Untracked" : "",
+"    \ "Renamed"   : "",
+"    \ "Unmerged"  : "═",
+"    \ "Deleted"   : "",
+"    \ "Dirty"     : "",
+"    \ "Clean"     : "",
+"    \ 'Ignored'   : '',
+"    \ "Unknown"   : ""
+"    \ }
+
 au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufRead,BufNewFile *.mustache setfiletype mustache

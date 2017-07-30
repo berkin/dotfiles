@@ -132,6 +132,8 @@ module.exports = {
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
 
+	addUnicodeCssClasses: true,
+
     // for advanced config flags please refer to https://hyper.is/#cfg
 	hyperTabs: {
 		tabIconsColored: true,
