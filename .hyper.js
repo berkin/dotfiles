@@ -26,7 +26,7 @@ module.exports = {
     // custom css to embed in the terminal window
     termCSS: `
 		x-row {
-			line-height: 21px
+			line-height: 21px;
 		}
 		x-row .unicode-node {
 			display: inline-block;
