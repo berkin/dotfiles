@@ -4,12 +4,13 @@
 source ~/.bash_profile
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/berkin/.oh-my-zsh
-cd ~/devel
+export ZSH=/Users/berkincirak/.oh-my-zsh
+cd ~/dev
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME=""
+
 # change to vi mode
 bindkey -v
 export DYLD_FORCE_FLAT_NAMESPACE=1
@@ -58,7 +59,9 @@ export DYLD_FORCE_FLAT_NAMESPACE=1
 plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+autoload -U promptinit; promptinit
 
+prompt pure
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -206,8 +209,8 @@ TRAPALRM() {
 
 # RPROMPT='$(prompt_online) $(battery_charge)'
 
-PROMPT='%{%f%b%k%}$(build_prompt)
-%D{%e %b %L:%M} %{%F{green}%}❯ '
+#PROMPT='%{%f%b%k%}$(build_prompt)
+#%D{%e %b %L:%M} %{%F{green}%}❯ '
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
