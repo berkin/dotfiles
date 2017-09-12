@@ -247,7 +247,7 @@ autocmd VimEnter * AirlineRefresh
 
 " youcompleteme bg color
 highlight Pmenu ctermfg=0 ctermbg=14
-let g:ycm_path_to_python_interpreter="/usr/bin/python"
+"let g:ycm_path_to_python_interpreter="/usr/bin/python"
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -290,9 +290,16 @@ let g:ale_sign_warning = ''
 highlight clear SignColumn
 highlight ALEErrorSign ctermfg=1
 highlight ALEWarningSign ctermfg=3
+"let g:ale_javascript_eslint_use_global = 1
 
 " git gutter
-let g:gitgutter_sign_column_always = 1
+"let g:gitgutter_sign_column_always = 1
+"set signcolumn=yes
+if exists('&signcolumn')  " Vim 7.4.2201
+  set signcolumn=yes
+else
+  let g:gitgutter_sign_column_always = 1
+endif
 let g:gitgutter_eager = 1
 "highlight GitGutterAdd ctermbg=0
 "highlight GitGutterChange ctermbg=0
