@@ -92,11 +92,11 @@ prompt pure
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias comeon="cd ~/devel/comeon-mobile/comeon-mobile-view/src/main/app"
-alias dotfiles="cd ~/devel/dotfiles"
-alias doc="cd ~/devel/document-everything"
-alias resume="cd ~/devel/resume"
-alias pimp="cd ~/devel/pimp-my-wallpaper"
+alias comeon="cd ~/dev/comeon-mobile/comeon-mobile-view/src/main/app"
+alias dotfiles="cd ~/dev/dotfiles"
+alias doc="cd ~/dev/document-everything"
+alias resume="cd ~/dev/resume"
+alias pimp="cd ~/dev/pimp-my-wallpaper"
 
 # battery charge, online check
 
@@ -219,3 +219,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="/Users/berkin/bin/Sencha/Cmd:$PATH"
+export PATH="/Users/berkincirak/bin/Sencha/Cmd:$PATH"

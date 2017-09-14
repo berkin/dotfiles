@@ -59,7 +59,7 @@
 	insteadOf = gist:
 
 [core]
-  excludesfile = /Users/berkin/.gitignore_global
+  excludesfile = /Users/berkincirak/.gitignore_global
   autocrlf = input
 
 [color]
@@ -80,3 +80,6 @@
     added = yellow
     changed = green
     untracked = red
+[user]
+	name = berkin
+	email = berkin@kuyabiye.com

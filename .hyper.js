@@ -4,7 +4,7 @@ module.exports = {
     fontSize: 13,
 
     // font family with optional fallbacks
-    fontFamily: '"MesloLGL NF", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"MesloLGL Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(255,255,0,1)',
@@ -27,16 +27,22 @@ module.exports = {
     termCSS: `
 		x-row {
 			line-height: 21px;
-		}
+		}/*
 		x-row .unicode-node {
 			display: inline-block;
 			vertical-align: top;
 			width: auto !important;
-		}
+		}*/
+
+    x-row .unicode-node {
+      position: relative;
+      z-index: 99;
+    }
 		x-row .unicode-node-,
-		x-row .unicode-node- {
+		X-row .unicode-node- {
 			text-indent: -9999px;
-			width: 7.8265625px;
+			width: 7.8265625px !important;
+
 		}
 		x-row .unicode-node-:after,
 		x-row .unicode-node-:after {
@@ -57,7 +63,7 @@ module.exports = {
 		}
 		x-row .unicode-node- {
 			text-indent: -9999px;
-			width: 7.8265625px;
+      width: 7.8265625px !important;
 		}
 		x-row .unicode-node-:after {
 			content: ' ';
@@ -66,7 +72,7 @@ module.exports = {
 			-webkit-mask-size: 8px 10px;
 			text-indent: 0;
 			float: left;
-			width: 7.8265625px;
+			width: 7.8265625px !important;
 			height: 21px;
 		}
 	  `,
@@ -132,7 +138,8 @@ module.exports = {
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
 
-	addUnicodeCssClasses: true,
+
+  addUnicodeCssClasses: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
 	hyperTabs: {
@@ -160,7 +167,7 @@ module.exports = {
         "hyper-pane",
         "hyperlayout",
         "hyperterm-tab-numbers",
-        "hypercwd",
+//        "hypercwd",
         "hyperterm-tabs"
     ],
 

@@ -116,7 +116,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 " Plugin 'Townk/vim-autoclose'
 " Plugin 'sbdchd/neoformat'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 Plugin 'craigemery/vim-autotag'
 Plugin 'tpope/vim-dispatch'
 Plugin 'wakatime/vim-wakatime'
@@ -124,7 +124,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'xolox/vim-easytags'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+"Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -239,11 +239,11 @@ set linespace=0
 
 set laststatus=2
 autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+"autocmd VimEnter * wincmd p
 
 " airline refresh hack for nerdtree
-autocmd VimEnter * AirlineRefresh
-autocmd VimEnter * AirlineRefresh
+"autocmd VimEnter * AirlineRefresh
+"autocmd VimEnter * AirlineRefresh
 
 " youcompleteme bg color
 highlight Pmenu ctermfg=0 ctermbg=14
@@ -328,8 +328,11 @@ let g:flow#autoclose = 1
 "set conceallevel=1
 "
 "" Nerdtree
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+"let g:NERDTreeDirArrowExpandable = ''
+"let g:NERDTreeDirArrowCollapsible = ''
+
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.DS_Store$']
 let NERDTreeMinimalUI = 1
@@ -378,6 +381,7 @@ au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufRead,BufNewFile *.mustache setfiletype mustache
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=mustache
+
 " change the default dictionary mappings for file extension matches
 
 " dev icons
