@@ -5,3 +5,6 @@
 /.idea/
 /coverage/
 /.vim/
+/build/
+/ext/
+/.sencha/

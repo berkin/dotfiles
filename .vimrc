@@ -328,11 +328,11 @@ let g:flow#autoclose = 1
 "set conceallevel=1
 "
 "" Nerdtree
-"let g:NERDTreeDirArrowExpandable = ''
-"let g:NERDTreeDirArrowCollapsible = ''
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
 
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+"let g:NERDTreeDirArrowExpandable = ''
+"let g:NERDTreeDirArrowCollapsible = ''
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.DS_Store$']
 let NERDTreeMinimalUI = 1
