@@ -110,7 +110,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'gioele/vim-autoswap'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'ap/vim-css-color'
+Plugin 'chrisbra/Colorizer'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
@@ -127,6 +127,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'xolox/vim-easytags'
 Plugin 'luochen1990/rainbow'
+Plugin 'othree/javascript-libraries-syntax.vim'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
@@ -172,6 +173,9 @@ endif
 
 " vim session
 let g:session_autoload = 'no'
+
+" colorizer
+let g:colorizer_auto_filetype='css,scss,html'
 
 " rainbow
 let g:rainbow_active = 0
