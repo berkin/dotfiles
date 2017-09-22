@@ -126,6 +126,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'xolox/vim-easytags'
+Plugin 'luochen1990/rainbow'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
@@ -171,6 +172,9 @@ endif
 
 " vim session
 let g:session_autoload = 'no'
+
+" rainbow
+let g:rainbow_active = 0
 
 "ctrlp
 function! CtrlPCommand()
