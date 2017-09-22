@@ -8,6 +8,8 @@ filetype off
 let &runtimepath.=',~/.vim/bundle/ale'
 
 filetype plugin on
+" dont show you mode, it is also displayed by airline
+set noshowmode
 
 set ruler
 set number
