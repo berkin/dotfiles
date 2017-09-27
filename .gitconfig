@@ -60,6 +60,7 @@
 
 [core]
   excludesfile = /Users/berkincirak/.gitignore_global
+  editor = vim
   autocrlf = input
 
 [color]
