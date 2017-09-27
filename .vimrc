@@ -128,6 +128,7 @@ Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'xolox/vim-easytags'
 Plugin 'luochen1990/rainbow'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'elzr/vim-json'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
