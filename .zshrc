@@ -56,10 +56,11 @@ export DYLD_FORCE_FLAT_NAMESPACE=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
+autoload -U compinit && compinit
 
 prompt pure
 # User configuration
@@ -97,6 +98,7 @@ alias dotfiles="cd ~/dev/dotfiles"
 alias doc="cd ~/dev/document-everything"
 alias resume="cd ~/dev/resume"
 alias pimp="cd ~/dev/pimp-my-wallpaper"
+alias iceye="cd ~/dev/iceye"
 
 # battery charge, online check
 
@@ -218,5 +220,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="/Users/berkin/bin/Sencha/Cmd:$PATH"
 export PATH="/Users/berkincirak/bin/Sencha/Cmd:$PATH"
