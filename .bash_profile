@@ -3,7 +3,7 @@
 
 export ACKRC=".ackrc"
 # install vim with "brew install vim" to provide clipboard support and add alias
-alias vim="/usr/local/bin/vim"
+#alias vim="/usr/local/bin/vim"
 
 git-blame() {
   ruby ~/bin/git-blame-colored $1 | less -R
@@ -14,3 +14,4 @@ for file in ~/.{extra,functions}; do
 done;
 export PATH="/Users/berkincirak/bin/Sencha/Cmd/6.0.1.76/..:$PATH"
 export PATH="/Users/berkincirak/bin/Sencha/Cmd/6.1.1.76/..:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"

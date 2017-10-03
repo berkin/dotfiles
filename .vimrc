@@ -83,7 +83,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 " Plugin 'ternjs/tern_for_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
@@ -179,7 +179,7 @@ let g:session_autoload = 'no'
 let g:colorizer_auto_filetype='css,scss,html'
 
 " rainbow
-let g:rainbow_active = 0
+let g:rainbow_active = 1
 
 "ctrlp
 function! CtrlPCommand()
