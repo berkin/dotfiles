@@ -84,7 +84,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " Plugin 'Valloric/YouCompleteMe'
-" Plugin 'ternjs/tern_for_vim'
+Plugin 'ternjs/tern_for_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
@@ -133,6 +133,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'ruanyl/vim-fixmyjs'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'othree/jspc.vim'
+Plugin 'sjl/gundo.vim'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
@@ -256,7 +257,6 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=tern#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 let g:neocomplete#sources#omni#functions = {}
 let g:neocomplete#sources#omni#functions.javascript = [
