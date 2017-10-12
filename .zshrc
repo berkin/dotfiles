@@ -99,6 +99,8 @@ alias doc="cd ~/dev/document-everything"
 alias resume="cd ~/dev/resume"
 alias pimp="cd ~/dev/pimp-my-wallpaper"
 alias iceye="cd ~/dev/iceye"
+alias vim="nvim"
+alias v="nvim"
 
 # battery charge, online check
 
