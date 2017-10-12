@@ -174,6 +174,9 @@ let g:tagbar_type_javascript = {
     \ ]
 \ }
 
+" Gundo
+nmap <Leader>g :GundoToggle<CR>
+
 " nvim python settings
 " https://ricostacruz.com/til/neovim-with-python-on-osx
 let g:python2_host_prog = '/usr/local/bin/python'

@@ -18,6 +18,7 @@
 <Leader>bd	/Users/berkincirak/dev/dotfiles/.vimrc	/^nnoremap <silent> <Leader>bd :Bclose<CR>$/;"	m	language:Vim
 <Leader>c	/Users/berkincirak/dev/dotfiles/.vimrc	/^nmap <Leader>c :NERDTreeCWD<CR>$/;"	m	language:Vim
 <Leader>f	/Users/berkincirak/dev/dotfiles/.vimrc	/^nmap <Leader>f :NERDTreeFind<CR>$/;"	m	language:Vim
+<Leader>g	/Users/berkincirak/dev/dotfiles/.vimrc	/^nmap <Leader>g :GundoToggle<CR>$/;"	m	language:Vim
 <Leader>n	/Users/berkincirak/dev/dotfiles/.vimrc	/^nmap <Leader>n :NERDTreeToggle<CR>$/;"	m	language:Vim
 <TAB>	/Users/berkincirak/dev/dotfiles/.vimrc	/^	inoremap <expr><TAB>  pumvisible() ? "\\<C-n>" : "\\<TAB>"$/;"	m	language:Vim
 <tab>	/Users/berkincirak/dev/dotfiles/.vimrc	/^	inoremap <expr><tab> pumvisible() ? "\\<c-n>" : "\\<tab>"$/;"	m	language:Vim
@@ -41,6 +42,10 @@ g:airline#extensions#tabline#left_alt_sep	/Users/berkincirak/dev/dotfiles/.vimrc
 g:airline#extensions#tabline#left_sep	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:airline#extensions#tabline#left_sep = ' '$/;"	v	language:Vim
 g:airline_powerline_fonts	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:airline_powerline_fonts = 1$/;"	v	language:Vim
 g:airline_theme	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:airline_theme='bubblegum'$/;"	v	language:Vim
+g:ale_fixers	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_fixers = {}$/;"	v	language:Vim
+g:ale_fixers	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_fixers['javascript'] = ['prettier']$/;"	v	language:Vim
+g:ale_fix_on_save	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_fix_on_save = 1$/;"	v	language:Vim
+g:ale_javascript_prettier_use_local_config	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_javascript_prettier_use_local_config = 1$/;"	v	language:Vim
 g:ale_linters	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_linters = {$/;"	v	language:Vim
 g:ale_sign_error	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_sign_error = ''$/;"	v	language:Vim
 g:ale_sign_warning	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_sign_warning = ''$/;"	v	language:Vim
@@ -49,6 +54,7 @@ g:ctrlp_cmd	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ctrlp_cmd = 'call Ctr
 g:ctrlp_user_command	/Users/berkincirak/dev/dotfiles/.vimrc	/^  let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'$/;"	v	language:Vim
 g:ctrlp_use_caching	/Users/berkincirak/dev/dotfiles/.vimrc	/^  let g:ctrlp_use_caching = 0$/;"	v	language:Vim
 g:deoplete#enable_at_startup	/Users/berkincirak/dev/dotfiles/.vimrc	/^	let g:deoplete#enable_at_startup = 1$/;"	v	language:Vim
+g:deoplete#max_list	/Users/berkincirak/dev/dotfiles/.vimrc	/^	let g:deoplete#max_list = 10$/;"	v	language:Vim
 g:deoplete#sources#ternjs#case_insensitive	/Users/berkincirak/dev/dotfiles/.vimrc	/^	let g:deoplete#sources#ternjs#case_insensitive = 1$/;"	v	language:Vim
 g:deoplete#sources#ternjs#depths	/Users/berkincirak/dev/dotfiles/.vimrc	/^	let g:deoplete#sources#ternjs#depths = 1$/;"	v	language:Vim
 g:deoplete#sources#ternjs#docs	/Users/berkincirak/dev/dotfiles/.vimrc	/^	let g:deoplete#sources#ternjs#docs = 1$/;"	v	language:Vim
