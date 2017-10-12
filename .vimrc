@@ -282,6 +282,9 @@ if !has('nvim')
 else
 	"deoplete
 	let g:deoplete#enable_at_startup = 1
+
+	let g:deoplete#max_list = 10
+
 	" Set bin if you have many instalations
 	let g:deoplete#sources#ternjs#timeout = 1
 
@@ -464,6 +467,14 @@ let g:ale_sign_warning = ''
 highlight clear SignColumn
 highlight ALEErrorSign ctermfg=1
 highlight ALEWarningSign ctermfg=3
+
+let g:ale_javascript_prettier_use_local_config = 1
+
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fix_on_save = 1
+
+
 "let g:ale_javascript_eslint_use_global = 1
 
 " git gutter

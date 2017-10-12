@@ -1,3 +1,4 @@
 *.swp
 *.agignore
 .vim
+tags
