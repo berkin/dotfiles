@@ -44,7 +44,7 @@ g:airline_powerline_fonts	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:airline
 g:airline_theme	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:airline_theme='bubblegum'$/;"	v	language:Vim
 g:ale_fixers	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_fixers = {}$/;"	v	language:Vim
 g:ale_fixers	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_fixers['javascript'] = ['prettier']$/;"	v	language:Vim
-g:ale_fix_on_save	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_fix_on_save = 1$/;"	v	language:Vim
+g:ale_fix_on_save	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_fix_on_save = 0$/;"	v	language:Vim
 g:ale_javascript_prettier_use_local_config	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_javascript_prettier_use_local_config = 1$/;"	v	language:Vim
 g:ale_linters	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_linters = {$/;"	v	language:Vim
 g:ale_sign_error	/Users/berkincirak/dev/dotfiles/.vimrc	/^let g:ale_sign_error = ''$/;"	v	language:Vim
