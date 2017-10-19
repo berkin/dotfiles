@@ -21,3 +21,4 @@
 # vi/vim swap files
 --ignore-file=match:/[._].*\.swp$/
 
+--ignore-file=is:yarn.lock

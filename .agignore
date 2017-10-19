@@ -8,3 +8,4 @@
 /build/
 /ext/
 /.sencha/
+yarn.lock

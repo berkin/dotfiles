@@ -475,7 +475,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
-let g:ale_fix_on_save = 0
+let g:ale_fix_on_save = 1
 
 
 "let g:ale_javascript_eslint_use_global = 1
@@ -494,6 +494,11 @@ let g:gitgutter_eager = 1
 "highlight GitGutterDelete ctermbg=0
 "highlight GitGutterChangeDelete ctermbg=0
 
+" vimdiff colors
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
 
 " flow
 let g:flow#autoclose = 1
