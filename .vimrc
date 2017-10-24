@@ -136,6 +136,8 @@ Plugin 'Shougo/deoplete.nvim'
 Plugin 'carlitux/deoplete-ternjs'
 Plugin 'othree/jspc.vim'
 Plugin 'sjl/gundo.vim'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'arcticicestudio/nord-vim'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
@@ -181,6 +183,7 @@ nmap <Leader>g :GundoToggle<CR>
 " https://ricostacruz.com/til/neovim-with-python-on-osx
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
+
 
 " easy tags
 set tags=./tags;
@@ -495,11 +498,14 @@ let g:gitgutter_eager = 1
 "highlight GitGutterChangeDelete ctermbg=0
 
 " vimdiff colors
-highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
-
+highlight DiffAdd    cterm=BOLD ctermfg=NONE ctermbg=green
+highlight DiffDelete cterm=BOLD ctermfg=NONE ctermbg=red
+highlight DiffChange cterm=BOLD ctermfg=NONE ctermbg=0
+highlight DiffText   cterm=BOLD ctermfg=NONE ctermbg=magenta
+"highlight DiffAdd cterm=none ctermfg=0 ctermbg=Green gui=none guifg=bg guibg=Green
+"highlight DiffDelete cterm=none ctermfg=0 ctermbg=Red gui=none guifg=bg guibg=Red
+"highlight DiffChange cterm=none ctermfg=0 ctermbg=Yellow gui=none guifg=bg guibg=Yellow
+"highlight DiffText cterm=none ctermfg=0 ctermbg=Magenta gui=none guifg=bg guibg=Magenta
 " flow
 let g:flow#autoclose = 1
 
