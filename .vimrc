@@ -123,7 +123,7 @@ Plugin 'craigemery/vim-autotag'
 Plugin 'tpope/vim-dispatch'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'xolox/vim-easytags'
 Plugin 'luochen1990/rainbow'
@@ -176,14 +176,21 @@ let g:tagbar_type_javascript = {
     \ ]
 \ }
 
+" javascript libraries
+let g:used_javascript_libs = 'react'
+
 " Gundo
 nmap <Leader>g :GundoToggle<CR>
 
 " nvim python settings
 " https://ricostacruz.com/til/neovim-with-python-on-osx
-let g:python2_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+"let g:python2_host_prog = '/usr/local/bin/python'
+"let g:python3_host_prog = '/usr/local/bin/python3'
 
+" nord vim
+" does not work??
+let g:nord_uniform_diff_background = 1
+let g:nord_italic_comments = 1
 
 " easy tags
 set tags=./tags;
@@ -413,6 +420,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = ' '
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 " let g:airline_left_sep = ''
 " let g:airline_left_alt_sep = ''
 " let g:airline_right_sep = ''
