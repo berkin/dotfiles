@@ -182,6 +182,8 @@ let g:used_javascript_libs = 'react'
 " Gundo
 nmap <Leader>g :GundoToggle<CR>
 
+let g:vim_json_warnings=0
+
 " nvim python settings
 " https://ricostacruz.com/til/neovim-with-python-on-osx
 "let g:python2_host_prog = '/usr/local/bin/python'
@@ -489,7 +491,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 
 
 "let g:ale_javascript_eslint_use_global = 1
