@@ -138,6 +138,7 @@ Plugin 'othree/jspc.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'Valloric/MatchTagAlways'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
