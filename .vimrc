@@ -1,4 +1,3 @@
-syntax on
 "set background=dark
 colorscheme nord
 
@@ -139,11 +138,13 @@ Plugin 'sjl/gundo.vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'Valloric/MatchTagAlways'
+Plugin 'leafgarland/typescript-vim'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+syntax on
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -594,6 +595,8 @@ au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufRead,BufNewFile *.mustache setfiletype mustache
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=mustache
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+
 
 " change the default dictionary mappings for file extension matches
 
