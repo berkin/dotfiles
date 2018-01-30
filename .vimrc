@@ -195,6 +195,7 @@ let g:vim_json_warnings=0
 " does not work??
 let g:nord_uniform_diff_background = 1
 let g:nord_italic_comments = 1
+let g:nord_comment_brightness = 16
 
 " easy tags
 set tags=./tags;
