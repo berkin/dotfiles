@@ -197,6 +197,8 @@ let g:nord_uniform_diff_background = 1
 let g:nord_italic_comments = 1
 let g:nord_comment_brightness = 16
 
+highlight htmlArg cterm=italic
+
 " easy tags
 set tags=./tags;
 let g:easytags_dynamic_files = 1
@@ -494,7 +496,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
-let g:ale_fix_on_save = 0
+let g:ale_fix_on_save = 1
 
 
 "let g:ale_javascript_eslint_use_global = 1
