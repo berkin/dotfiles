@@ -6,7 +6,6 @@ module.exports = {
 		// font family with optional fallbacks
 		fontFamily:
 			'"MesloLGL Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
-		//fontFamily:'"FuraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
 		// terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
 		cursorColor: 'rgba(255,255,0,1)',
@@ -27,10 +26,8 @@ module.exports = {
 		css: '',
 		// custom css to embed in the terminal window
 		termCSS: `
-		x-screen x-row { font-variant-ligatures: contextual; }
 		x-row {
-
-			line-height: 18px;
+			line-height: 21px;
 		}/*
 		x-row .unicode-node {
 			display: inline-block;
