@@ -168,13 +168,22 @@ map <F8> :Bclose<CR>
 map <F9> :bprevious<CR>
 map <F10> :bnext<CR>
 
+" c (classes), f (functions), m (methods), p (properties), and v (global
+" variables), for javascript files.
 let g:tagbar_type_javascript = {
     \ 'ctagstype' : 'JavaScript',
     \ 'kinds'     : [
-        \ 'o:objects',
-        \ 'f:functions',
-        \ 'a:arrays',
-        \ 's:strings'
+		\ 'T:support',
+		\ 'A:arrays',
+		\ 'O:objects',
+		\ 'P:properties',
+		\ 'G:generators',
+		\ 'F:functions',
+		\ 'C:constructors',
+		\ 'M:methods',
+		\ 'V:variables',
+		\ 'I:imports',
+		\ 'E:exports'
     \ ]
 \ }
 
