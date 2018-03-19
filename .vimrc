@@ -173,17 +173,10 @@ map <F10> :bnext<CR>
 let g:tagbar_type_javascript = {
     \ 'ctagstype' : 'JavaScript',
     \ 'kinds'     : [
-		\ 'T:support',
-		\ 'A:arrays',
-		\ 'O:objects',
-		\ 'P:properties',
-		\ 'G:generators',
-		\ 'F:functions',
-		\ 'C:constructors',
-		\ 'M:methods',
-		\ 'V:variables',
-		\ 'I:imports',
-		\ 'E:exports'
+        \ 'a:array',
+        \ 'o:object',
+        \ 'f:function',
+        \ 'v:var'
     \ ]
 \ }
 
