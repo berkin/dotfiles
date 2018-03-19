@@ -1,10 +1,15 @@
 {
-  "libs": [
-    "browser",
-    "jquery"
-  ],
-  "loadEagerly": [
-  ],
-  "plugins": {
-  }
+	"libs": [
+		"browser",
+		"react"
+	],
+	"loadEagerly": [
+		"src/**/*.js",
+		"src/**/*.jsx"
+	],
+	"plugins": {
+		"node": {},
+		"jsx": {},
+		"es_modules": {}
+	}
 }
