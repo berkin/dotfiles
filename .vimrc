@@ -382,6 +382,8 @@ function! CtrlPCommand()
 endfunction
 
 let g:ctrlp_cmd = 'call CtrlPCommand()'
+let g:ctrlp_line_prefix = '  '
+
 "let g:ctrlp_show_hidden = 1
 
 " neoformat {{{

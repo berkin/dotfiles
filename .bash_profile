@@ -15,3 +15,5 @@ done;
 export PATH="/Users/berkincirak/bin/Sencha/Cmd/6.0.1.76/..:$PATH"
 export PATH="/Users/berkincirak/bin/Sencha/Cmd/6.1.1.76/..:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+export PATH="$HOME/.cargo/bin:$PATH"
