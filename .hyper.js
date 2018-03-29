@@ -152,6 +152,10 @@ module.exports = {
 		paneNavigation: {
 			showIndicators: false, // Show pane number
 		},
+		hypercwd: {
+			initialWorkingDirectory: '~/dev',
+		},
+		confirmQuit: true,
 	},
 
 	// a list of plugins to fetch and install from npm
@@ -167,8 +171,9 @@ module.exports = {
 		'hyper-pane',
 		'hyperlayout',
 		'hyperterm-tab-numbers',
-		//        "hypercwd",
+		'hypercwd',
 		'hyperterm-tabs',
+		'hyper-confirm',
 	],
 
 	// in development, you can create a directory under
