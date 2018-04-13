@@ -164,6 +164,23 @@ syntax on
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+let s:nord0_gui = "#2E3440"
+let s:nord1_gui = "#3B4252"
+let s:nord2_gui = "#434C5E"
+let s:nord3_gui = "#4C566A"
+let s:nord4_gui = "#D8DEE9"
+let s:nord5_gui = "#E5E9F0"
+let s:nord6_gui = "#ECEFF4"
+let s:nord7_gui = "#8FBCBB"
+let s:nord8_gui = "#88C0D0"
+let s:nord9_gui = "#81A1C1"
+let s:nord10_gui = "#5E81AC"
+let s:nord11_gui = "#BF616A"
+let s:nord12_gui = "#D08770"
+let s:nord13_gui = "#EBCB8B"
+let s:nord14_gui = "#A3BE8C"
+let s:nord15_gui = "#B48EAD"
 let mapleader = " "
 
 map <F2> :exe "vertical resize -10"<CR>
@@ -387,6 +404,28 @@ endif
 
 " rainbow
 let g:rainbow_active = 1
+let g:rainbow_conf = {
+	\	'guifgs': [s:nord7_gui, s:nord7_gui, s:nord9_gui, s:nord10_gui],
+	\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+	\	'operators': '_,_',
+	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+	\	'separately': {
+	\		'*': {},
+	\		'tex': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+	\		},
+	\		'lisp': {
+	\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+	\		},
+	\		'vim': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+	\		},
+	\		'html': {
+	\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+	\		},
+	\		'css': 0,
+	\	}
+	\}
 
 "ctrlp
 function! CtrlPCommand()
@@ -582,23 +621,6 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
  exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
-
-let s:nord0_gui = "#2E3440"
-let s:nord1_gui = "#3B4252"
-let s:nord2_gui = "#434C5E"
-let s:nord3_gui = "#4C566A"
-let s:nord4_gui = "#D8DEE9"
-let s:nord5_gui = "#E5E9F0"
-let s:nord6_gui = "#ECEFF4"
-let s:nord7_gui = "#8FBCBB"
-let s:nord8_gui = "#88C0D0"
-let s:nord9_gui = "#81A1C1"
-let s:nord10_gui = "#5E81AC"
-let s:nord11_gui = "#BF616A"
-let s:nord12_gui = "#D08770"
-let s:nord13_gui = "#EBCB8B"
-let s:nord14_gui = "#A3BE8C"
-let s:nord15_gui = "#B48EAD"
 
 " @TODO configure as
 " language files use own color js => yellow, css =>, html =>
