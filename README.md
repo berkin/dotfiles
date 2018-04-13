@@ -5,7 +5,7 @@
 # dotfiles
 
 - symlink all the files and folder from this repo.
-- using 13 pt Meslo LG L Nerd Font
+- using 13 pt Meslo LG L Nerd Font _italic_
 
 # todo
 

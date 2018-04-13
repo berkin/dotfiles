@@ -1,4 +1,11 @@
 "set background=dark
+" nord vim
+" does not work??
+set termguicolors
+let g:nord_uniform_diff_background = 1
+let g:nord_italic_comments = 1
+let g:nord_italic = 1
+let g:nord_comment_brightness = 16
 colorscheme nord
 
 set nocompatible              " be iMproved, required
@@ -197,22 +204,19 @@ if has('autocmd')
         autocmd FileType css setlocal iskeyword+=-
     augroup END
 
+	" js pretty template
     call jspretmpl#register_tag('gql', 'graphql')
     " Use sass highlighting for `styled.span` / `styled.div` / etc
     call jspretmpl#register_tag('\v(styled\.\w+)', 'scss')
-    "autocmd FileType javascript JsPreTmpl html
+    " autocmd FileType javascript JsPreTmpl html
 endif
+"autocmd FileType javascript JsPreTmpl html
 
 " nvim python settings
 " https://ricostacruz.com/til/neovim-with-python-on-osx
 "let g:python2_host_prog = '/usr/local/bin/python'
 "let g:python3_host_prog = '/usr/local/bin/python3'
 
-" nord vim
-" does not work??
-let g:nord_uniform_diff_background = 1
-let g:nord_italic_comments = 1
-let g:nord_comment_brightness = 16
 
 highlight htmlArg cterm=italic
 
@@ -535,10 +539,10 @@ let g:gitgutter_eager = 1
 "highlight GitGutterChangeDelete ctermbg=0
 
 " vimdiff colors
-highlight DiffAdd    cterm=BOLD ctermfg=NONE ctermbg=green
-highlight DiffDelete cterm=BOLD ctermfg=NONE ctermbg=red
-highlight DiffChange cterm=BOLD ctermfg=NONE ctermbg=0
-highlight DiffText   cterm=BOLD ctermfg=NONE ctermbg=magenta
+"highlight DiffAdd    cterm=BOLD ctermfg=NONE ctermbg=green
+"highlight DiffDelete cterm=BOLD ctermfg=NONE ctermbg=red
+"highlight DiffChange cterm=BOLD ctermfg=NONE ctermbg=0
+"highlight DiffText   cterm=BOLD ctermfg=NONE ctermbg=magenta
 "highlight DiffAdd cterm=none ctermfg=0 ctermbg=Green gui=none guifg=bg guibg=Green
 "highlight DiffDelete cterm=none ctermfg=0 ctermbg=Red gui=none guifg=bg guibg=Red
 "highlight DiffChange cterm=none ctermfg=0 ctermbg=Yellow gui=none guifg=bg guibg=Yellow
@@ -579,19 +583,42 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('info', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('config', 'green', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('ignore', 'red', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('lock', 'green', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'magenta', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('xml', 'magenta', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('yml', 'magenta', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('scss', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('js', 'yellow', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('jsx', 'blue', 'none', '#ffa500', '#151515')
+let s:nord0_gui = "#2E3440"
+let s:nord1_gui = "#3B4252"
+let s:nord2_gui = "#434C5E"
+let s:nord3_gui = "#4C566A"
+let s:nord4_gui = "#D8DEE9"
+let s:nord5_gui = "#E5E9F0"
+let s:nord6_gui = "#ECEFF4"
+let s:nord7_gui = "#8FBCBB"
+let s:nord8_gui = "#88C0D0"
+let s:nord9_gui = "#81A1C1"
+let s:nord10_gui = "#5E81AC"
+let s:nord11_gui = "#BF616A"
+let s:nord12_gui = "#D08770"
+let s:nord13_gui = "#EBCB8B"
+let s:nord14_gui = "#A3BE8C"
+let s:nord15_gui = "#B48EAD"
+
+call NERDTreeHighlightFile('md', 'blue', 'none', s:nord9_gui, 'none')
+call NERDTreeHighlightFile('info', 'blue', 'none',s:nord9_gui , 'none')
+call NERDTreeHighlightFile('rc', 'blue', 'none',s:nord9_gui , 'none')
+call NERDTreeHighlightFile('config', 'green', 'none', s:nord14_gui, 'none')
+call NERDTreeHighlightFile('port', 'green', 'none', s:nord14_gui, 'none')
+call NERDTreeHighlightFile('project', 'green', 'none', s:nord14_gui, 'none')
+call NERDTreeHighlightFile('ignore', 'red', 'none', s:nord11_gui, 'none')
+call NERDTreeHighlightFile('log', 'red', 'none', s:nord11_gui, 'none')
+call NERDTreeHighlightFile('lock', 'green', 'none', s:nord14_gui, 'none')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', s:nord13_gui, 'none')
+call NERDTreeHighlightFile('babelrc', 'yellow', 'none', s:nord13_gui, 'none')
+call NERDTreeHighlightFile('json', 'magenta', 'none', s:nord15_gui, 'none')
+call NERDTreeHighlightFile('xml', 'magenta', 'none', s:nord15_gui, 'none')
+call NERDTreeHighlightFile('yml', 'magenta', 'none', s:nord15_gui, 'none')
+call NERDTreeHighlightFile('tags', 'magenta', 'none', s:nord15_gui, 'none')
+call NERDTreeHighlightFile('css', 'cyan', 'none', s:nord7_gui, 'none')
+call NERDTreeHighlightFile('scss', 'cyan', 'none', s:nord7_gui, 'none')
+call NERDTreeHighlightFile('js', 'yellow', 'none', s:nord13_gui, 'none')
+call NERDTreeHighlightFile('jsx', 'blue', 'none', s:nord9_gui, 'none')
 
 nmap <Leader>f :NERDTreeFind<CR>
 nmap <Leader>n :NERDTreeToggle<CR>
@@ -633,8 +660,6 @@ let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.babelrc'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*babel.*\.js$'] = 'ƛ'
 
-" js pretty template
-"autocmd FileType javascript JsPreTmpl html
 
 " Delete buffer while keeping window layout (don't close buffer's windows).
 " Version 2008-11-18 from http://vim.wikia.com/wiki/VimTip165
