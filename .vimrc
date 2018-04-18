@@ -507,7 +507,7 @@ let g:airline_right_alt_sep = ''
 set linespace=0
 
 set laststatus=2
-autocmd VimEnter * NERDTree
+autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 "autocmd VimEnter * wincmd p
 
 " airline refresh hack for nerdtree
@@ -638,25 +638,25 @@ endfunction
 " assets => magenta
 " specific file types, Dockerfile, ProcFile
 
-call NERDTreeHighlightFile('md', 'blue', 'none', s:nord9_gui, 'none')
-call NERDTreeHighlightFile('info', 'blue', 'none',s:nord9_gui , 'none')
-call NERDTreeHighlightFile('rc', 'blue', 'none',s:nord9_gui , 'none')
-call NERDTreeHighlightFile('config', 'green', 'none', s:nord14_gui, 'none')
-call NERDTreeHighlightFile('port', 'green', 'none', s:nord14_gui, 'none')
-call NERDTreeHighlightFile('project', 'green', 'none', s:nord14_gui, 'none')
-call NERDTreeHighlightFile('ignore', 'red', 'none', s:nord11_gui, 'none')
-call NERDTreeHighlightFile('log', 'red', 'none', s:nord11_gui, 'none')
-call NERDTreeHighlightFile('lock', 'green', 'none', s:nord14_gui, 'none')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', s:nord13_gui, 'none')
-call NERDTreeHighlightFile('babelrc', 'yellow', 'none', s:nord13_gui, 'none')
-call NERDTreeHighlightFile('json', 'magenta', 'none', s:nord15_gui, 'none')
-call NERDTreeHighlightFile('xml', 'magenta', 'none', s:nord15_gui, 'none')
-call NERDTreeHighlightFile('yml', 'magenta', 'none', s:nord15_gui, 'none')
-call NERDTreeHighlightFile('tags', 'magenta', 'none', s:nord15_gui, 'none')
-call NERDTreeHighlightFile('css', 'cyan', 'none', s:nord7_gui, 'none')
-call NERDTreeHighlightFile('scss', 'cyan', 'none', s:nord7_gui, 'none')
-call NERDTreeHighlightFile('js', 'yellow', 'none', s:nord13_gui, 'none')
-call NERDTreeHighlightFile('jsx', 'blue', 'none', s:nord9_gui, 'none')
+call NERDTreeHighlightFile('md', 'blue', 'none', s:nord9_gui, 'NONE')
+call NERDTreeHighlightFile('info', 'blue', 'none',s:nord9_gui , 'NONE')
+call NERDTreeHighlightFile('rc', 'blue', 'none',s:nord9_gui , 'NONE')
+call NERDTreeHighlightFile('config', 'green', 'none', s:nord14_gui, 'NONE')
+call NERDTreeHighlightFile('port', 'green', 'none', s:nord14_gui, 'NONE')
+call NERDTreeHighlightFile('project', 'green', 'none', s:nord14_gui, 'NONE')
+call NERDTreeHighlightFile('ignore', 'red', 'none', s:nord11_gui, 'NONE')
+call NERDTreeHighlightFile('log', 'red', 'none', s:nord11_gui, 'NONE')
+call NERDTreeHighlightFile('lock', 'green', 'none', s:nord14_gui, 'NONE')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', s:nord13_gui, 'NONE')
+call NERDTreeHighlightFile('babelrc', 'yellow', 'none', s:nord13_gui, 'NONE')
+call NERDTreeHighlightFile('json', 'magenta', 'none', s:nord15_gui, 'NONE')
+call NERDTreeHighlightFile('xml', 'magenta', 'none', s:nord15_gui, 'NONE')
+call NERDTreeHighlightFile('yml', 'magenta', 'none', s:nord15_gui, 'NONE')
+call NERDTreeHighlightFile('tags', 'magenta', 'none', s:nord15_gui, 'NONE')
+call NERDTreeHighlightFile('css', 'cyan', 'none', s:nord7_gui, 'NONE')
+call NERDTreeHighlightFile('scss', 'cyan', 'none', s:nord7_gui, 'NONE')
+call NERDTreeHighlightFile('js', 'yellow', 'none', s:nord13_gui, 'NONE')
+call NERDTreeHighlightFile('jsx', 'blue', 'none', s:nord9_gui, 'NONE')
 
 nmap <Leader>f :NERDTreeFind<CR>
 nmap <Leader>n :NERDTreeToggle<CR>
@@ -678,6 +678,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "    \ "Unknown"   : ""
 "    \ }
 
+" set json syntax to files like .eslintrc
+au BufRead,BufNewFile {.eslintrc,.eslintignore} setlocal ft=json
 au BufNewFile,BufRead *.json setfiletype json syntax=javascript
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufRead,BufNewFile *.mustache setfiletype mustache
