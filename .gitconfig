@@ -9,6 +9,7 @@
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	# summary for stand-up
 	log-standup = !git log --since yesterday --author $(git config user.email) --pretty=short
 
 	# view unpushed commit
