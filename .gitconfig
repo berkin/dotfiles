@@ -16,8 +16,9 @@
 	view-unpushed = git log origin/master..HEAD
 
 	# Do everything we can to synchronize all changes
+
 	get = !git pull --rebase && git submodule update --init --recursive
-	put = !git commit --all --message="$1" && git push
+	put = "!f() { git add -A && git commit -m \"$@\" && git push;  }; f"
 
 	# diff unpushed commit
 	diff-unpushed = git diff origin/master..HEAD
