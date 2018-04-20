@@ -1,6 +1,7 @@
 [include]
 	path = ~/.gitconfig.private
 
+# https://github.com/GitAlias/gitalias/blob/master/gitalias.txt
 [alias]
 	s = status
 	co = checkout
@@ -8,9 +9,13 @@
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	log-standup = !git log --since yesterday --author $(git config user.email) --pretty=short
 
 	# view unpushed commit
 	view-unpushed = git log origin/master..HEAD
+
+	get = !git pull --rebase && git submodule update --init --recursive
+	put = !git commit --all --message="$1" && git push
 
 	# diff unpushed commit
 	diff-unpushed = git diff origin/master..HEAD
@@ -99,7 +104,7 @@
 	prompt = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
