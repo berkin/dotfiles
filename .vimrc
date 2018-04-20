@@ -64,7 +64,12 @@ set t_RV=
 
 " remove macvim scrollbars
 set guioptions=
-
+if  has("gui_running")
+	set guifont=MesloLGL Nerd Font:h13
+	" maximize the window
+	set lines=4000
+	set columns=4000
+endif
 
 " map ctrl+c to add system clipboard
 " http://stackoverflow.com/questions/11489428/how-to-make-vim-paste-from-and-copy-to-systems-clipboard
