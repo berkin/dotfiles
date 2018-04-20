@@ -62,6 +62,9 @@ set cursorline    " highlight the current line
 " hyper.js first line
 set t_RV=
 
+" remove macvim scrollbars
+set guioptions=
+
 
 " map ctrl+c to add system clipboard
 " http://stackoverflow.com/questions/11489428/how-to-make-vim-paste-from-and-copy-to-systems-clipboard
@@ -211,7 +214,7 @@ let g:used_javascript_libs = 'react'
 " Gundo
 nmap <Leader>g :GundoToggle<CR>
 
-let g:vim_json_warnings=0
+let g:vim_json_warnings = 0
 let g:jsx_ext_required = 0 " Works on files other than .jsx
 
 if has('autocmd')
@@ -564,7 +567,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 
 
 "let g:ale_javascript_eslint_use_global = 1
