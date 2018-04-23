@@ -9,6 +9,7 @@
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+
 	# summary for stand-up
 	log-standup = !git log --since yesterday --author $(git config user.email) --pretty=short
 
@@ -16,9 +17,8 @@
 	view-unpushed = git log origin/master..HEAD
 
 	# Do everything we can to synchronize all changes
-
 	get = !git pull --rebase && git submodule update --init --recursive
-	put = "!f() { git add -A && git commit -m \"$@\" && git push;  }; f"
+	put = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
 
 	# diff unpushed commit
 	diff-unpushed = git diff origin/master..HEAD
@@ -29,9 +29,6 @@
 	# We wanna grab those pesky un-added files!
 	stash-all = stash save --include-untracked
 
-	# add all files, commit and push
-	push-fast = "!f(){ git add . && git commit -m \"$1\" && git push; };f"
-
 	stash-diff = "!f(){ git stash show -p stash@{$1}; };f"
 
 	# smart chekcout: stash changes, checkout branch, pop from stash
@@ -41,9 +38,9 @@
 	added = difftool --cached
 
 [status]
-  showUntrackedFiles = all
-  # Sometimes a newly-added folder, since it's only one line in git status, can slip under the radar.
+  # git add works like git add --all. it adds untracked files also
   # https://git-scm.com/docs/git-config#git-config-statusshowUntrackedFiles
+  showUntrackedFiles = all
 
 # A nice little github-like colorful, split diff right in the console.
 # brew install icdiff
@@ -67,7 +64,7 @@
 	insteadOf = gist:
 
 [core]
-	excludesfile = /Users/berkincirak/.gitignore_global
+  excludesfile = /Users/berkincirak/.gitignore_global
   editor = vim
   autocrlf = input
 
