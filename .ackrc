@@ -22,3 +22,4 @@
 --ignore-file=match:/[._].*\.swp$/
 
 --ignore-file=is:yarn.lock
+--ignore-file=is:package-lock.json

@@ -65,6 +65,7 @@ set t_RV=
 " remove macvim scrollbars
 set guioptions=
 if  has("gui_running")
+	"set guifont=Fira\ Code:h14
 	set guifont=MesloLGL Nerd Font:h13
 	" maximize the window
 	set lines=4000
