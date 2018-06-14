@@ -27,6 +27,7 @@ set lazyredraw
 set hlsearch
 set nowrap
 set autowrite
+set noerrorbells
 " Persistent undo
 set undofile
 set undolevels=1000
@@ -66,7 +67,8 @@ set t_RV=
 set guioptions=
 if  has("gui_running")
 	"set guifont=Fira\ Code:h14
-	set guifont=MesloLGL Nerd Font:h13
+	"set guifont=FuraCode\ Nerd\ Font:h13
+	set guifont=MesloLGL\ Nerd\ Font:h13
 	" maximize the window
 	set lines=4000
 	set columns=4000
@@ -701,14 +703,14 @@ autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 " dev icons
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
-let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.editorconfig'] = 'ƛ'
-let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.babelrc'] = ''
+"let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.editorconfig'] = 'ƛ'
+"let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.babelrc'] = ''
 
 " add or override pattern matches for filetypes
 " these take precedence over the file extensions
 
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
-let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*babel.*\.js$'] = 'ƛ'
+"let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*babel.*\.js$'] = 'ƛ'
 
 
 " Delete buffer while keeping window layout (don't close buffer's windows).
