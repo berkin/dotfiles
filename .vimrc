@@ -27,7 +27,8 @@ set lazyredraw
 set hlsearch
 set nowrap
 set autowrite
-set noerrorbells
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 " Persistent undo
 set undofile
 set undolevels=1000
