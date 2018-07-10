@@ -1,12 +1,12 @@
 "set background=dark
 " nord vim
 " does not work??
+colorscheme nord
 set termguicolors
 let g:nord_uniform_diff_background = 1
 let g:nord_italic_comments = 1
 let g:nord_italic = 1
 let g:nord_comment_brightness = 16
-colorscheme nord
 
 set nocompatible              " be iMproved, required
 filetype off

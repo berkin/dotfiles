@@ -171,7 +171,6 @@ module.exports = {
 		'hyper-pane',
 		'hyperlayout',
 		'hyperterm-tab-numbers',
-		'hypercwd',
 		'hyperterm-tabs',
 		'hyper-confirm',
 	],
