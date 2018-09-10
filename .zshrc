@@ -4,7 +4,7 @@
 source ~/.bash_profile
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/berkincirak/.oh-my-zsh
+export ZSH=/Users/kuyabiye/.oh-my-zsh
 cd ~/dev
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -93,14 +93,11 @@ prompt pure
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias comeon="cd ~/dev/comeon-mobile/comeon-mobile-view/src/main/app"
 alias dotfiles="cd ~/dev/dotfiles"
 alias doc="cd ~/dev/document-everything"
 alias resume="cd ~/dev/resume"
 alias pimp="cd ~/dev/pimp-my-wallpaper"
-alias iceye="cd ~/dev/iceye"
 alias vim="nvim"
-alias v="nvim"
 
 # battery charge, online check
 
@@ -222,4 +219,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="/Users/berkincirak/bin/Sencha/Cmd:$PATH"
