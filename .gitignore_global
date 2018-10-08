@@ -3,3 +3,4 @@
 .agignore
 tags
 .tern-port
+.tern-project

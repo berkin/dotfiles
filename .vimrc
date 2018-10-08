@@ -160,6 +160,7 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'junegunn/goyo.vim'
+Plugin 'styled-components/vim-styled-components'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
@@ -222,6 +223,7 @@ let g:tagbar_type_javascript = {
 let g:used_javascript_libs = 'react'
 
 " Gundo
+let g:gundo_prefer_python3 = 1
 nmap <Leader>g :GundoToggle<CR>
 
 let g:vim_json_warnings = 0

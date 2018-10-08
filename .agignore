@@ -11,3 +11,4 @@ ext/
 .sencha/
 yarn.lock
 package-lock.json
+internals/
