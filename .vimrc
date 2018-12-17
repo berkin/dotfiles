@@ -229,6 +229,12 @@ nmap <Leader>g :GundoToggle<CR>
 let g:vim_json_warnings = 0
 let g:jsx_ext_required = 0 " Works on files other than .jsx
 
+let g:netrw_banner = 0
+let g:netrw_browse_split = 1
+let g:netrw_winsize = 25
+let g:netrw_liststyle = 3
+let g:netrw_altv = 1
+
 if has('autocmd')
   " Support `-` in css property names
     augroup VimCSS3Syntax
@@ -581,6 +587,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['json'] = ['prettier']
+let g:ale_fixers['html'] = ['prettier']
 let g:ale_fix_on_save = 1
 
 
