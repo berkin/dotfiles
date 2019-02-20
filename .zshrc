@@ -56,7 +56,7 @@ export DYLD_FORCE_FLAT_NAMESPACE=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-completions)
+# plugins=(zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
@@ -64,7 +64,7 @@ autoload -Uz compinit
 compinit
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
-
+SPACESHIP_CHAR_SYMBOL="❯ "
 prompt spaceship
 
 # prompt pure
