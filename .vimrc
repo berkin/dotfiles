@@ -8,7 +8,7 @@ let g:nord_italic_comments = 1
 let g:nord_italic = 1
 let g:nord_comment_brightness = 16
 
-set nocompatible              " be iMproved, required
+set nocompatible
 filetype off
 
 let &runtimepath.=',~/.vim/bundle/ale'
@@ -242,13 +242,14 @@ if has('autocmd')
         autocmd FileType css setlocal iskeyword+=-
     augroup END
 
-	" js pretty template
-    call jspretmpl#register_tag('gql', 'graphql')
-    " Use sass highlighting for `styled.span` / `styled.div` / etc
-    call jspretmpl#register_tag('\v(styled\.\w+)', 'scss')
-    " autocmd FileType javascript JsPreTmpl html
 endif
-"autocmd FileType javascript JsPreTmpl html
+
+" js pretty template
+call jspretmpl#register_tag('gql', 'graphql')
+" Use sass highlighting for `styled.span` / `styled.div` / etc
+call jspretmpl#register_tag('\v(styled\.\w+)', 'scss')
+
+autocmd FileType javascript JsPreTmpl html
 
 " nvim python settings
 " https://ricostacruz.com/til/neovim-with-python-on-osx

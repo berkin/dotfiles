@@ -64,10 +64,10 @@ autoload -Uz compinit
 compinit
 # Completion for kitty
 # kitty + complete setup zsh | source /dev/stdin
-SPACESHIP_CHAR_SYMBOL="❯ "
-prompt spaceship
+# SPACESHIP_CHAR_SYMBOL="❯ "
+# prompt spaceship
 
-# prompt pure
+prompt pure
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
