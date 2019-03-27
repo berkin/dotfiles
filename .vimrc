@@ -1,6 +1,5 @@
 "set background=dark
 " nord vim
-" does not work??
 colorscheme nord
 set termguicolors
 let g:nord_uniform_diff_background = 1
@@ -109,9 +108,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Quramy/vim-js-pretty-template'
 " Plugin 'othree/yajs.vim'
-"Plugin 'pangloss/vim-javascript'
+" Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'mxw/vim-jsx'
 Plugin 'hail2u/vim-css3-syntax'
@@ -150,7 +148,7 @@ Plugin 'luochen1990/rainbow'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'elzr/vim-json'
 Plugin 'prettier/vim-prettier'
-Plugin 'ruanyl/vim-fixmyjs'
+" Plugin 'ruanyl/vim-fixmyjs'
 " Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'carlitux/deoplete-ternjs'
@@ -161,6 +159,7 @@ Plugin 'arcticicestudio/nord-vim'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'junegunn/goyo.vim'
 Plugin 'styled-components/vim-styled-components'
+Plugin 'Quramy/vim-js-pretty-template'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
@@ -249,7 +248,7 @@ call jspretmpl#register_tag('gql', 'graphql')
 " Use sass highlighting for `styled.span` / `styled.div` / etc
 call jspretmpl#register_tag('\v(styled\.\w+)', 'scss')
 
-autocmd FileType javascript JsPreTmpl html
+"autocmd FileType javascript JsPreTmpl
 
 " nvim python settings
 " https://ricostacruz.com/til/neovim-with-python-on-osx
@@ -283,7 +282,7 @@ endif
 let g:session_autoload = 'no'
 
 " fix my js
-let g:fixmyjs_rc_filename = ['.eslintrc', '.eslintrc.json']
+" let g:fixmyjs_rc_filename = ['.eslintrc', '.eslintrc.json']
 
 " colorizer
 let g:colorizer_auto_filetype='css,scss,html'
@@ -797,5 +796,3 @@ function! s:Bclose(bang, buffer)
 endfunction
 command! -bang -complete=buffer -nargs=? Bclose call s:Bclose('<bang>', '<args>')
 nnoremap <silent> <Leader>bd :Bclose<CR>
-
-" auto pairs
