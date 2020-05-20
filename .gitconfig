@@ -102,6 +102,7 @@
 [mergetool]
 	path = nvim
 	prompt = false
+	keepBackup = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
