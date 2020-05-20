@@ -1,12 +1,7 @@
 "set background=dark
 " nord vim
-colorscheme nord
-set termguicolors
-let g:nord_uniform_diff_background = 1
-let g:nord_italic_comments = 1
-let g:nord_italic = 1
-let g:nord_comment_brightness = 16
 
+set termguicolors
 set nocompatible
 filetype off
 
@@ -90,82 +85,96 @@ vnoremap <C-c> "*y
 "highlight SpecialKey ctermfg=10 ctermbg=8 guibg=white
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"
+"
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
+" KPlugin commands between vundle#begin/end.
 " Plugin 'Valloric/YouCompleteMe'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'editorconfig/editorconfig-vim'
+"/puPlug 'ternjs/tern_for_vim'
+Plug 'scrooloose/nerdtree'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'editorconfig/editorconfig-vim'
 " Plugin 'othree/yajs.vim'
 " Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'mxw/vim-jsx'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'jparise/vim-graphql'
-" Plugin 'vim-syntastic/syntastic'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'hjson/vim-hjson'
-Plugin 'tpope/vim-surround'
-Plugin 'flowtype/vim-flow'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'gioele/vim-autoswap'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'chrisbra/Colorizer'
-Plugin 'w0rp/ale'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mustache/vim-mustache-handlebars'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'mxw/vim-jsx'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'jparise/vim-graphql'
+Plug 'leafgarland/typescript-vim'
+"Plug 'HerringtonDarkholme/yats.vim'
+Plug 'peitalin/vim-jsx-typescript'
+
+
+" Plin 'vim-syntastic/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'hjson/vim-hjson'
+Plug 'tpope/vim-surround'
+Plug 'flowtype/vim-flow'
+"Plugin 'ryanoasis/vim-devicons'
+Plug 'gioele/vim-autoswap'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'chrisbra/Colorizer'
+Plug 'w0rp/ale'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'mustache/vim-mustache-handlebars'
 " Plugin 'Townk/vim-autoclose'
 " Plugin 'sbdchd/neoformat'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'majutsushi/tagbar'
-Plugin 'craigemery/vim-autotag'
-Plugin 'tpope/vim-dispatch'
-Plugin 'wakatime/vim-wakatime'
-Plugin 'Chiel92/vim-autoformat'
-"Plugin 'terryma/vim-multiple-cursors'
-Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'xolox/vim-easytags'
-Plugin 'luochen1990/rainbow'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'elzr/vim-json'
-Plugin 'prettier/vim-prettier'
-" Plugin 'ruanyl/vim-fixmyjs'
-" Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'carlitux/deoplete-ternjs'
-Plugin 'othree/jspc.vim'
-Plugin 'sjl/gundo.vim'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-Plugin 'arcticicestudio/nord-vim'
-Plugin 'Valloric/MatchTagAlways'
-Plugin 'junegunn/goyo.vim'
-Plugin 'styled-components/vim-styled-components'
-Plugin 'Quramy/vim-js-pretty-template'
+Plug 'jiangmiao/auto-pairs'
+Plug 'majutsushi/tagbar'
+Plug 'craigemery/vim-autotag'
+Plug 'tpope/vim-dispatch'
+Plug 'wakatime/vim-wakatime'
+Plug 'Chiel92/vim-autoformat'
+"Plun 'terryma/vim-multiple-cursors'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'xolox/vim-easytags'
+Plug 'luochen1990/rainbow'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'elzr/vim-json'
+Plug 'prettier/vim-prettier'
+" Plin 'ruanyl/vim-fixmyjs'
+" Plin 'Shougo/neocomplete.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'carlitux/deoplete-ternjs'
+Plug 'othree/jspc.vim'
+Plug 'sjl/gundo.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'arcticicestudio/nord-vim'
+Plug 'Valloric/MatchTagAlways'
+Plug 'junegunn/goyo.vim'
+Plug 'styled-components/vim-styled-components'
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'sheerun/vim-polyglot'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 syntax on
+
+filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -206,6 +215,19 @@ map <F8> :Bclose<CR>
 map <F9> :bprevious<CR>
 map <F10> :bnext<CR>
 
+"hi tsxAttrib guibg=s:nord3_gui cterm=italic
+
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
 " c (classes), f (functions), m (methods), p (properties), and v (global
 " variables), for javascript files.
 let g:tagbar_type_javascript = {
@@ -713,14 +735,14 @@ autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 " change the default dictionary mappings for file extension matches
 
 " dev icons
-let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
+"let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
 "let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.editorconfig'] = 'ƛ'
 "let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.babelrc'] = ''
 
 " add or override pattern matches for filetypes
 " these take precedence over the file extensions
 
-let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
+"let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
 "let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*babel.*\.js$'] = 'ƛ'
 
 
@@ -796,3 +818,5 @@ function! s:Bclose(bang, buffer)
 endfunction
 command! -bang -complete=buffer -nargs=? Bclose call s:Bclose('<bang>', '<args>')
 nnoremap <silent> <Leader>bd :Bclose<CR>
+ 
+colorscheme nord
