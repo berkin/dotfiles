@@ -1,7 +1,9 @@
 "set background=dark
 " nord vim
 
-set termguicolors
+" https://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode
+"set termguicolors
+
 set nocompatible
 filetype off
 
@@ -34,6 +36,7 @@ set undodir=~/.vim/undo//
 set list
 "set listchars:▒░,trail:~
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set fillchars+=vert:.
 set showbreak=↪
 
 set completeopt-=preview
@@ -804,5 +807,15 @@ function! s:Bclose(bang, buffer)
 endfunction
 command! -bang -complete=buffer -nargs=? Bclose call s:Bclose('<bang>', '<args>')
 nnoremap <silent> <Leader>bd :Bclose<CR>
+
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_uniform_diff_background = 1
+
+augroup nord-theme-overrides
+  autocmd!
+  " Use 'nord7' as foreground color for Vim comment titles.
+  autocmd ColorScheme nord highlight htmlArg cterm=italic
+augroup END
 
 colorscheme nord
