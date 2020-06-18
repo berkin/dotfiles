@@ -105,7 +105,6 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'editorconfig/editorconfig-vim'
 " Plugin 'othree/yajs.vim'
 " Plugin 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
@@ -143,7 +142,7 @@ Plug 'majutsushi/tagbar'
 Plug 'craigemery/vim-autotag'
 Plug 'tpope/vim-dispatch'
 Plug 'wakatime/vim-wakatime'
-Plug 'Chiel92/vim-autoformat'
+"Plug 'Chiel92/vim-autoformat'
 "Plun 'terryma/vim-multiple-cursors'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'xolox/vim-easytags'
@@ -153,17 +152,18 @@ Plug 'elzr/vim-json'
 Plug 'prettier/vim-prettier'
 " Plin 'ruanyl/vim-fixmyjs'
 " Plin 'Shougo/neocomplete.vim'
-Plug 'Shougo/deoplete.nvim'
-Plug 'carlitux/deoplete-ternjs'
+"Plug 'Shougo/deoplete.nvim'
+"Plug 'carlitux/deoplete-ternjs'
 Plug 'othree/jspc.vim'
 Plug 'sjl/gundo.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'arcticicestudio/nord-vim'
 Plug 'Valloric/MatchTagAlways'
 Plug 'junegunn/goyo.vim'
-Plug 'styled-components/vim-styled-components'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main'  }
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'editorconfig/editorconfig-vim'
 "Plug 'sheerun/vim-polyglot'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 
@@ -206,7 +206,7 @@ map <F2> :exe "vertical resize -10"<CR>
 map <F3> :exe "vertical resize +10"<CR>
 map <F4> :exe "resize -10"<CR>
 map <F5> :exe "resize +10"<CR>
-noremap <F6> :Autoformat<CR>
+"noremap <F6> :Autoformat<CR>
 nmap <F7> :TagbarToggle<CR>
 map <F8> :Bclose<CR>
 map <F9> :bprevious<CR>
@@ -225,6 +225,150 @@ endif
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
+" TextEdit might fail if hidden is not set.
+set hidden
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder.
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Map function and class text objects
+" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+
+" Use CTRL-S for selections ranges.
+" Requires 'textDocument/selectionRange' support of LS, ex: coc-tsserver
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" Add (Neo)Vim's native statusline support.
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Mappings using CoCList:
+" Show all diagnostics.
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions.
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands.
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document.
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols.
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list.
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+
 " c (classes), f (functions), m (methods), p (properties), and v (global
 " variables), for javascript files.
 let g:tagbar_type_javascript = {
@@ -298,141 +442,6 @@ let g:session_autoload = 'no'
 " colorizer
 let g:colorizer_auto_filetype='css,scss,html'
 
-if !has('nvim')
-		" neocomplete
-	" Use neocomplete.
-	" Disable AutoComplPop.
-	let g:acp_enableAtStartup = 0
-	" Use neocomplete.
-	let g:neocomplete#enable_at_startup = 1
-	" Use smartcase.
-	let g:neocomplete#enable_smart_case = 1
-	" Set minimum syntax keyword length.
-	let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-	" Define dictionary.
-	let g:neocomplete#sources#dictionary#dictionaries = {
-		\ 'default' : '',
-		\ 'vimshell' : $HOME.'/.vimshell_hist',
-		\ 'scheme' : $HOME.'/.gosh_completions'
-			\ }
-
-	" Define keyword.
-	if !exists('g:neocomplete#keyword_patterns')
-		let g:neocomplete#keyword_patterns = {}
-	endif
-	let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-	" Plugin key-mappings.
-	inoremap <expr><C-g>     neocomplete#undo_completion()
-	inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-	" Recommended key-mappings.
-	" <CR>: close popup and save indent.
-	inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-	function! s:my_cr_function()
-	  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-	  " For no inserting <CR> key.
-	  "return pumvisible() ? "\<C-y>" : "\<CR>"
-	endfunction
-	" <TAB>: completion.
-	inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-	" <C-h>, <BS>: close popup and delete backword char.
-	inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-	inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-	" Close popup by <Space>.
-	"inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-
-	" AutoComplPop like behavior.
-	"let g:neocomplete#enable_auto_select = 1
-
-	" Shell like behavior(not recommended).
-	"set completeopt+=longest
-	"let g:neocomplete#enable_auto_select = 1
-	"let g:neocomplete#disable_auto_complete = 1
-	"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
-
-	" Enable omni completion.
-	autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-	autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-	let g:neocomplete#sources#omni#functions = {}
-	let g:neocomplete#sources#omni#functions.javascript = [
-			\   'jspc#omni',
-			\   'tern#Complete',
-			\ ]
-	" Enable heavy omni completion.
-	if !exists('g:neocomplete#sources#omni#input_patterns')
-	  let g:neocomplete#sources#omni#input_patterns = {}
-	endif
-	"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-	"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-	"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-else
-	"deoplete
-	let g:deoplete#enable_at_startup = 1
-
-	let g:deoplete#max_list = 10
-
-	" Set bin if you have many instalations
-	let g:deoplete#sources#ternjs#timeout = 1
-
-	" Whether to include the types of the completions in the result data. Default: 0
-	let g:deoplete#sources#ternjs#types = 1
-
-	" Whether to include the distance (in scopes for variables, in prototypes for
-	" properties) between the completions and the origin position in the result
-	" data. Default: 0
-	let g:deoplete#sources#ternjs#depths = 1
-
-	" Whether to include documentation strings (if found) in the result data.
-	" Default: 0
-	let g:deoplete#sources#ternjs#docs = 1
-
-	" When on, only completions that match the current word at the given point will
-	" be returned. Turn this off to get all results, so that you can filter on the
-	" client side. Default: 1
-	let g:deoplete#sources#ternjs#filter = 0
-
-	" Whether to use a case-insensitive compare between the current word and
-	" potential completions. Default 0
-	let g:deoplete#sources#ternjs#case_insensitive = 1
-
-	" When completing a property and no completions are found, Tern will use some
-	" heuristics to try and return some properties anyway. Set this to 0 to
-	" turn that off. Default: 1
-	let g:deoplete#sources#ternjs#guess = 0
-
-	" Determines whether the result set will be sorted. Default: 1
-	let g:deoplete#sources#ternjs#sort = 0
-
-	" When disabled, only the text before the given position is considered part of
-	" the word. When enabled (the default), the whole variable name that the cursor
-	" is on will be included. Default: 1
-	let g:deoplete#sources#ternjs#expand_word_forward = 0
-
-	" Whether to ignore the properties of Object.prototype unless they have been
-	" spelled out by at least to characters. Default: 1
-	let g:deoplete#sources#ternjs#omit_object_prototype = 0
-
-	" Whether to include JavaScript keywords when completing something that is not
-	" a property. Default: 0
-	let g:deoplete#sources#ternjs#include_keywords = 1
-
-	" If completions should be returned when inside a literal. Default: 1
-	let g:deoplete#sources#ternjs#in_literal = 0
-
-
-	"Add extra filetypes
-	let g:deoplete#sources#ternjs#filetypes = [
-					\ 'jsx',
-					\ 'vue'
-					\ ]
-	"
-	" deoplete tab-complete
-	inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-endif
 
 " rainbow
 let g:rainbow_active = 1
@@ -720,7 +729,6 @@ au BufRead,BufNewFile *.mustache setfiletype mustache
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=mustache
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
-
 " change the default dictionary mappings for file extension matches
 
 " dev icons
@@ -817,5 +825,4 @@ augroup nord-theme-overrides
   " Use 'nord7' as foreground color for Vim comment titles.
   autocmd ColorScheme nord highlight htmlArg cterm=italic
 augroup END
-
 colorscheme nord
